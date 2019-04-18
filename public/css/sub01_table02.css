@@ -1,0 +1,302 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    min-width: 400px;
+}
+
+.content {}
+
+.container .content {
+    margin-left: 50px;
+    width: 95%;
+    margin: 0 auto;
+}
+.container .content h3{
+    font-weight: bold;
+    color: #1D4482;
+    line-height: 3;
+}
+.container .content h3 i{
+    margin-right: 18px;
+}
+/* tables01 */
+.tables01{
+    margin: 10px 30px 50px 30px;
+}
+
+.tables01 ul{
+	float:right;
+	color:#fff;
+	margin-bottom:10px;
+}
+.tables01 ul li{
+	float:left;
+	width:160px;
+	border-radius:15px;
+	/*background:rgba(0,0,0,0.2);*/
+	margin-left:3px;
+	text-shadow:
+}
+
+.tables01 ul li i{
+	float:left;
+	padding: 7px 0 0 8px;
+}
+
+.tables01 ul li input{
+	padding:8px;
+	cursor:pointer;
+	background:transparent;
+	border:none;
+	color:#fff;
+	float:left;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.tables01 table{
+	border: none;
+    border-top: 3px solid #575a65;
+    border-bottom: 3px solid #575a65;
+    width: 100%;
+}
+.tables01 table tr{
+    text-align: center;
+}
+.tables01 table tr th{
+	height: 40px;
+    padding: 14px 10px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    border-bottom: 3px solid #575a65;
+    background: #F2F7FC;
+}
+.tables01 table .col{
+    /* box-shadow: 0 0 5px rgba(0,0,0,0.3); */
+}
+.tables01 table tr:last-child td{
+    border-bottom: none;
+}
+
+.tables01 table tr td{
+    padding: 12px 20px;
+    word-break: break-all;
+    line-height: 1.6;
+    font-size: 1.2em;
+    border-bottom: 1px solid #dedede;
+    /* border-right: 1px solid #efefef; */
+}
+.tables01 table tr td:last-child{
+    border-right: none;
+}
+.tables01 table tr:hover{
+    background: rgba(107,110,206,0.8);
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.tables01 table .col:hover{
+    color: #333;
+}
+.tables01 table tr td span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+.tables01 table tr .downInfo{
+    text-align: center;
+    font-size: 20px;
+}
+.tables01 table tr:hover .downInfo a i{
+    color: #fff;
+}
+
+.tables01 table tr .num{
+	background:none;
+}
+
+.blockId{
+    /* border-right: 1px solid #333;  */
+}
+
+.num{
+	width:10px;
+	font-size: 12px;
+    font-weight: bold;
+	color:#20232a;
+}
+.tables01 table tr th select{
+    height: 100%;
+    font-size: 12px;
+    font-weight: bold;
+	text-align:center;
+	color:#20232a;
+    cursor:pointer;
+}
+
+.tables01 table tbody{
+    
+}
+
+
+.tables01 table{
+}
+.tables01 table .odd,.tables01 table .odd tr{
+    background: #F2F7FC;
+    width: 100%;
+}
+
+.tables01 table .odd:hover tr{
+    background: none;
+}
+
+.tables01 table tbody{
+	font-size: 18px;
+    color: #575a65;
+}
+
+
+.tables01 table tr td input{
+	width: 95%;
+    height: 30px;
+	background:transparent;
+	color:#575a65;
+    border: none;
+    border-bottom: 1px solid #20232a;
+	text-align:center;
+}
+
+.styled-select {
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
+}
+
+
+.styled-select select {
+
+    border: none;
+    background-size: 15px;
+    -webkit-appearance: none;
+    /* 화살표 없애기 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+
+}
+
+.styled-select select::-ms-expand {
+    display: none;
+}
+.tables01 table tbody tr:hover{
+
+}
+.tables01 table tbody tr th{
+    background: #F2F7FC;
+}
+.tables01 table tbody tr th{
+    width: 33%;
+}
+
+
+.tables01 table tbody tr:hover td input {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+
+
+/*media query*/
+@media screen and (max-width: 1280px) {}
+
+@media screen and (max-width: 959px) {
+    .container .content h3{
+        line-height: 3;
+    }
+    .container .content h3 i{
+        margin-right: 10px;
+    }
+    .tables01{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .tables01 h3{
+        padding-left: 0px;
+        height: 50px;
+        font-size: 1em;
+        }
+    .tables01 h3 i{
+        margin-right: 10px;
+    }
+
+    .tables01 table tbody{
+    }
+    .tables01 table tbody tr td, .tables01 table tbody tr th{
+        padding: 5px 5px;
+        line-height: 1.6;
+        word-break: break-word;
+        font-size: 0.8em;
+        height: 0;
+    }
+    .blockId span{
+        font-size: 0.8em;
+    }
+    .tables01 table{
+        width: 100%;
+    }
+    .tables01 table tr td{
+        line-height: 1.6;
+        padding: 5px 10px;
+    }
+    .tables01 table tr .downInfo{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container .content h3{
+        line-height: 3;
+    }
+    .container .content h3 i{
+        margin-right: 10px;
+    }
+    .tables01{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .tables01 h3{
+        padding-left: 0px;
+        height: 40px;
+        font-size: 1em;
+        }
+    .tables01 h3 i{
+        margin-right: 10px;
+    }
+
+    .tables01 table tbody{
+    }
+    .tables01 table tbody tr td, .tables01 table tbody tr th{
+        padding: 5px 5px;
+        line-height: 1.6;
+        word-break: break-word;
+        font-size: 0.5em;
+        height: 0;
+    }
+    .blockId span{
+        font-size: 0.5em;
+    }
+    .tables01 table{
+        width: 100%;
+    }
+    .tables01 table tr td{
+        line-height: 1.6;
+        padding: 5px 10px;
+    }
+    .tables01 table tr .downInfo{
+        font-size: 16px;
+    }
+}

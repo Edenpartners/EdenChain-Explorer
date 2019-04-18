@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MainFront from './componets/MainFront/MainFront';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import TransactionFullList from './componets/Transaction/TransactionFullList';
+import BlockFullList from './componets/Block/BlockFullList';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+         <Route exact path="/" component={MainFront} />
+         <Route path="/txlist" component={TransactionFullList} />
+         <Route path="/blocklist" component={BlockFullList} />
+      </Router>    
     );
   }
 }
