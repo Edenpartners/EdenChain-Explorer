@@ -54,7 +54,7 @@ class HeaderMenu extends Component{
                     </div>
                 </nav>
 
-                <div className="header fixed">
+                <div className="header fixed content">
 
                     <div className="logoDiv">
                         <h1><a href=""><img src="../images/e-explorer2@4x.png" alt="logo"/></a></h1>

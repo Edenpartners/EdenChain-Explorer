@@ -53,6 +53,8 @@ body {
 .container {
     font-family: 'Roboto', sans-serif;
     padding-left: 70px;
+    font-size: 16px;
+}
     }
     
 .fixed{
@@ -84,6 +86,7 @@ body {
 
 .logoDiv h1 a img {
     width: 200px;
+    margin-top: 15px;
 }
 
 .header .search {
@@ -108,7 +111,7 @@ body {
 .header .search input {
     border: 2px solid #8b4ab8;
     border-radius: 30px;
-    height: 50px;
+    height: 35px;
     font-size: 1em;
     color: #1d4482;
     width: 83%;
@@ -213,6 +216,10 @@ nav .menu li a {
     display: grid;
     font-size: 1.4em;
     line-height: 4;
+}
+.menu_tit li:first-child{
+    text-align: right;
+    padding-right: 20px;
 }
 
 .menu_tit li:last-child {
@@ -334,7 +341,7 @@ nav .menu li a {
     }
 
     .header.content {
-        height: 70px;
+        height: 130px;
     }
     nav{
         width: 0;

@@ -52,6 +52,7 @@
     justify-content: center;
     grid-gap: 0 40px;
     margin-left: 10px;
+    max-height: 300px;
 }
 
 .dashCon.summary .cont {
@@ -493,6 +494,7 @@ footer {
   ##Screen = B/w 768px to 1024px
 */
 @media screen and (max-width: 1400px) {
+    
     .mainCon01 .dashCon.summary .cont01{
         background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat 120%  -10%;
         background-size: 30%;
@@ -593,12 +595,12 @@ footer {
     }
 
     .mainCon01 .dashCon.summary .cont01{
-        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -5% -50%;
-        background-size: 30%;
+        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -10% -25%;
+        background-size: 35%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont01:hover{
-        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -5% -50%;
+        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -10% -25%;
         background-size: 40%;
         transition: 0.5s;
     }
@@ -610,7 +612,7 @@ footer {
     }
     .mainCon01 .dashCon.summary .cont02:hover{
         background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat -10% -25%;
-        background-size: 35%;
+        background-size: 40%;
         transition: 0.5s;
     }
     
@@ -621,7 +623,7 @@ footer {
     }
     .mainCon01 .dashCon.summary .cont03:hover{
         background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat -5% -20%;
-        background-size: 32%;
+        background-size: 37%;
         transition: 0.5s;
     }
     .mainCon02 .cont01 #first_chart,.mainCon02 .cont02 #second_chart{
@@ -631,6 +633,7 @@ footer {
 
     .dashCon.summary{
         height: 80%;
+        max-height: none;
     }
     
 
@@ -719,6 +722,7 @@ footer {
         display: block;
         grid-template-columns: none;
         grid-gap: 0;
+        max-height: none;
     }
     .dashCon.summary .cont{
         margin-bottom: 20px;
