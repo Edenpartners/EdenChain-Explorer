@@ -11,7 +11,7 @@ class TransactionFullList extends Component {
                 <div className="container">
 
                 <div className="fixed">
-                <div className="fullCon" id="fullCon">
+                <div className="content" id="fullCon">
 
                     <h3><i className="eden-box"></i>Transaction List<span>Data Information for Developer</span></h3>
 
