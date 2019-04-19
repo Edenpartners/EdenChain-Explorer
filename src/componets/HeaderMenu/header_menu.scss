@@ -1,0 +1,834 @@
+
+
+/*container*/
+.HeaderMenu{
+    font-size: 18px;
+
+
+    .mainCon{
+        display: grid;
+        grid-template-rows: 20% 80%;
+        color: var(--primary);
+    }
+    .mainCon h3{
+        color: #1D4482;
+        
+    }
+    .mainCon h4 i{
+        color: #DCE5EF;
+        font-size: 150px;
+    }
+    .mainCon h3 i{
+        margin-right:18px;
+        font-size: 1.2em;
+    }
+    .container .fullCon {
+        display: grid;
+        grid-template-rows: 60% 40%;
+        height: 100%;
+    }
+
+    .mainContent01 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        min-height: 30%;
+        margin-bottom: 50px;
+    }
+
+
+    .mainContent01 .mainCon h3{
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+
+    .dashCon.summary {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        color: var(--light);
+        height: 100%;
+        justify-content: center;
+        grid-gap: 0 40px;
+        margin-left: 10px;
+    }
+
+    .dashCon.summary .cont {
+        background: #F2F7FC;
+        display: grid;
+        align-items: center;
+        padding: 0 20px;
+    }
+    /* .dashCon.summary .cont::before,
+    .dashCon.summary .cont::after{
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .dashCon.summary .cont:hover{
+        color: #fbca67;
+    }
+    .dashCon.summary .cont:hover::before{
+        border-top-color: #fbca67;
+        border-right-color: #fbca67;
+    }
+    .dashCon.summary .cont:hover::after{
+        border-bottom-color: #fbca67;
+        border-left-color: #fbca67;
+        transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+    } */
+    .dashCon.summary .chart{
+
+    }
+    .dashCon.summary .chart canvas{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .dashCon.summary .cont04{
+        display: none;
+    }
+
+    .mainCon01 {}
+    .mainCon01 .summary{
+    }
+    .mainCon01 .summary .cont{
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mainCon01 .summary .cont h4{
+        position: absolute;
+        top: -60px;
+        right: -50px;
+        margin: 0;
+        padding: 0;
+        color:#EFEFEF;
+        font-size: 12em;
+        transition: 0.5s;
+        z-index: 0;
+    }
+    .mainCon01 .summary .cont01:hover h4{
+        top: -100px;
+        right: -20px;
+        transition: 0.5s;
+    }
+    .mainCon01 .summary .cont02:hover h4{
+        top: -100px;
+        right: -20px;
+        transition: 0.5s;
+    }
+    .mainCon01 .summary .cont03:hover h4{
+        top: -100px;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+
+    .mainCon01 .summary .cont h5{
+        margin: 0 0 10px;
+        padding: 0;
+        font-size: 1.6em;
+        font-weight: 500;
+        color: #282828;
+        z-index: 0;
+    }
+    .mainCon01 .summary .cont p{
+        margin: 0;
+        padding: 0;
+        color: #1D4482;
+        font-size:4em;
+        font-weight: 700;
+        z-index: 0;
+        text-align: center;
+    }
+    .mainCon01 .summary .cont03 p{
+        font-size: 2.5em;
+    }
+    .mainCon01 .summary .cont01 p span,.mainCon01 .summary .cont02 p span{
+        padding-left: 10px;
+        font-size: 0.6em;
+    }
+    .mainCon01 .summary .cont a{
+        position: relative;
+        margin: 0;
+        padding: 10px 10px;
+        text-decoration: none;
+        display: inline-block;
+        color: #333;
+        border: 1px solid #8b4ab8;
+        width: fit-content;
+        border-radius: 25px;
+        transition: 0.5s;
+        transform: translateY(-40px);
+        opacity: 0;
+        visibility: visible;
+        width: 28%;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .mainCon01 .summary .cont a:hover{
+        color: #fff;
+        background: #1d4482; /* Old browsers */
+        background: #1d4482; /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #9AC4E9 2%, #D5B4EF 100%); 
+        background: -webkit-linear-gradient(-45deg, #9AC4E9 2%,#D5B4EF 100%);
+        background: linear-gradient(135deg, #9AC4E9 2%,#D5B4EF 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9AC4E9', endColorstr='#D5B4EF',GradientType=1 ); 
+        transition: 0.2s;
+        cursor: pointer;
+        border: none;
+    }
+
+    .mainCon01 .summary .cont01:hover a{
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+    .mainCon01 .summary .cont02:hover a{
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+    .mainCon01 .summary .cont03:hover a{
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dashCon.summary .cont01{
+    }
+    .mainCon01 .dashCon.summary .cont01{
+        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat 120% -65%;
+        background-size: 40%;
+        transition: 0.5s;
+    }
+    .mainCon01 .dashCon.summary .cont01:hover{
+        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat 110% 0%;
+        background-size: 35%;
+        transition: 0.5s;
+    }
+
+    .mainCon01 .dashCon.summary .cont02{
+        background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat 120% -65%;
+        background-size: 40%;
+        transition: 0.5s;
+    }
+    .mainCon01 .dashCon.summary .cont02:hover{
+        background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat 105% 0%;
+        background-size: 35%;
+        transition: 0.5s;
+    }
+
+    .mainCon01 .dashCon.summary .cont03{
+        background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat 120% -65%;
+        background-size: 40%;
+        transition: 0.5s;
+    }
+    .mainCon01 .dashCon.summary .cont03:hover{
+        background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat 110% 0%;
+        background-size: 35%;
+        transition: 0.5s;
+    }
+    .mainCon02 .cont01 #first_chart,.mainCon02 .cont02 #second_chart{
+        height: 100% !important;
+        width: 100% !important;
+    }
+    #second_chart>div>div{
+        width: 100%;
+        height: 100%;
+    }
+    .mainCon02 .cont01 .chartjs-size-monitor,.mainCon02 .cont02 .chartjs-size-monitor{
+        display: none;
+    }
+
+    .mainContent02 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 30%;
+        height: max-content;
+        width: 98%;
+    }
+
+    .mainContent02 .mainCon {
+        display: grid;
+        grid-template-rows: 10% 90%;
+        margin-bottom: 100px;
+    }
+
+    .mainContent02 .mainCon .h3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mainContent02 .mainCon h3 {
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .titR {
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        margin-right:30px;
+    }
+    .titR button{
+        border: 1px solid #1D4482;
+        background: none;
+        line-height: 1.6;
+        padding: 4px 20px 4px 20px;
+        font-size: 1.2em;
+        border-radius: 22px;
+        cursor: pointer;
+    }
+    .titR button:hover{
+        border: none;
+        background: -moz-linear-gradient(-45deg, #9AC4E9 2%, #D5B4EF 100%); 
+        background: -webkit-linear-gradient(-45deg, #9AC4E9 2%,#D5B4EF 100%);
+        background: linear-gradient(135deg, #9AC4E9 2%,#D5B4EF 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9AC4E9', endColorstr='#D5B4EF',GradientType=1 ); 
+        transition: 0.2s;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .titL {
+        display: flex;
+        padding-left: 30px;
+        align-items: center;
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+
+    .listCon {
+        border: 1px solid red;
+        height: 100%;
+    }
+    /*mai*/
+    /* tables01 */
+    .tables01{
+        margin: 10px 30px 50px 30px;
+    }
+
+    .tables01 ul{
+        float:right;
+        color:#fff;
+        margin-bottom:10px;
+    }
+    .tables01 ul li{
+        float:left;
+        width:160px;
+        border-radius:15px;
+        /*background:rgba(0,0,0,0.2);*/
+        margin-left:3px;
+        
+    }
+
+    .tables01 ul li i{
+        float:left;
+        padding: 7px 0 0 8px;
+    }
+
+    .tables01 ul li input{
+        padding:8px;
+        cursor:pointer;
+        background:transparent;
+        border:none;
+        color:#fff;
+        float:left;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    .tables01 table{
+        border: none;
+        border-top: 3px solid #575a65;
+        border-bottom: 3px solid #575a65;
+        width: 100%;
+    }
+    .tables01 table tr{
+        text-align: center;
+    }
+    .tables01 table tr th{
+        height: 40px;
+        padding: 14px 10px;
+        font-size: 1.2em;
+        line-height: 1.6;
+        border-bottom: 3px solid #575a65;
+        background: #F2F7FC;
+    }
+    .tables01 table .col{
+        /* box-shadow: 0 0 5px rgba(0,0,0,0.3); */
+    }
+    .tables01 table tr:last-child td{
+        border-bottom: none;
+    }
+
+    .tables01 table tr td{
+        padding: 12px 20px;
+        word-break: break-all;
+        line-height: 1.6;
+        font-size: 1.2em;
+        border-bottom: 1px solid #dedede;
+        /* border-right: 1px solid #efefef; */
+    }
+    .tables01 table tr td:last-child{
+        border-right: none;
+    }
+    .tables01 table tr:hover{
+        background: rgba(107,110,206,0.8);
+        color: #fff;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .tables01 table .col:hover{
+        color: #333;
+    }
+    .tables01 table tr td span{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;
+    }
+    .tables01 table tr .downInfo{
+        text-align: center;
+        font-size: 20px;
+    }
+    .tables01 table tr:hover .downInfo a i{
+        color: #fff;
+    }
+
+    .tables01 table tr .num{
+        background:none;
+    }
+
+    .blockId{
+        /* border-right: 1px solid #333;  */
+    }
+
+    .num{
+        width:10px;
+        font-size: 12px;
+        font-weight: bold;
+        color:#20232a;
+    }
+    .tables01 table tr th select{
+        height: 100%;
+        font-size: 12px;
+        font-weight: bold;
+        text-align:center;
+        color:#20232a;
+        cursor:pointer;
+    }
+
+    .tables01 table tbody{
+        
+    }
+
+
+    .tables01 table{
+    }
+    .tables01 table .odd,.tables01 table .odd tr{
+        background: #F2F7FC;
+        width: 100%;
+    }
+
+    .tables01 table .odd:hover tr{
+        background: none;
+    }
+
+    .tables01 table tbody{
+        font-size: 18px;
+        color: #575a65;
+    }
+
+
+    .tables01 table tr td input{
+        width: 95%;
+        height: 30px;
+        background:transparent;
+        color:#575a65;
+        border: none;
+        border-bottom: 1px solid #20232a;
+        text-align:center;
+    }
+
+    .styled-select{
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
+    }
+
+
+    .styled-select select {
+
+        border:none;
+        background-size: 15px;
+        -webkit-appearance: none;
+    /* 화살표 없애기 */
+    -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+    
+    }
+
+    .styled-select select::-ms-expand { display: none; }
+
+
+
+
+    /*footer*/
+    footer {
+        display: none;
+    }
+
+    /*media query*/
+    /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+    */
+    @media screen and (max-width: 1400px) {
+        .mainCon01 .dashCon.summary .cont01{
+            background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat 120%  -10%;
+            background-size: 30%;
+            transition: 0.5s;
+        }
+        .mainCon01 .dashCon.summary .cont01:hover{
+            background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat 120%  20%;
+            background-size: 40%;
+            transition: 0.5s;
+        }
+        
+        .mainCon01 .dashCon.summary .cont02{
+            background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat 120%  -10%;
+            background-size: 40%;
+            transition: 0.5s;
+        }
+        .mainCon01 .dashCon.summary .cont02:hover{
+            background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat 120%  20%;
+            background-size: 40%;
+            transition: 0.5s;
+        }
+        
+        .mainCon01 .dashCon.summary .cont03{
+            background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat 120%  -10%;
+            background-size: 40%;
+            transition: 0.5s;
+        }
+        .mainCon01 .dashCon.summary .cont03:hover{
+            background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat 110% 0%;
+            background-size: 40%;
+            transition: 0.5s;
+        }
+        .mainCon02 .cont01 #first_chart,.mainCon02 .cont02 #second_chart{
+            height: 100% !important;
+            width: 100% !important;
+        }
+    }
+
+    @media screen and (min-width: 501px) and (max-width: 959px){
+        .container .fullCon{
+            display: block;
+            grid-template-rows: none;
+        }
+        .container .content{
+        }
+        .mainCon h3 i{
+            font-size: 1.2em;
+        }
+        .mainContent01{
+            margin: 0 auto;
+            display: block;
+        }
+        .mainCon{
+            width: 90%;
+            display: block;
+            clear: both;
+            margin: 0 auto;
+        }
+        .mainContent01 .mainCon h3{
+            font-size: 1.2em;
+            padding-left: 0px;
+            height: 60px;      
+        }
+        .mainCon01 .summary .cont p{
+            font-size: 2em;
+        }
+        .mainCon01 .summary .cont01 p span, .mainCon01 .summary .cont02 p span{
+            font-size: 0.5em;
+        }
+        
+        .dashCon.summary{
+            margin-left: 0px;
+            padding: 0;
+            display: block;
+            grid-template-columns: none;
+            grid-gap: 0;
+        }
+        .dashCon.summary .cont{
+            margin-bottom: 20px;
+            padding: 8px;
+            display: block;
+        }
+        .mainCon01 .summary .cont h5{
+            font-size: 1.4em;
+        }
+        .mainCon01 .summary .cont .more{
+            display: block;
+        }
+        .mainCon01 .summary .cont a{
+            opacity: 1;
+            transform: none;
+            border-radius: 18px;
+            padding: 4px 0px;
+            float: right;
+            width: 20%;
+            padding: 0;
+            font-size: 1em;
+        }
+
+        .mainCon01 .dashCon.summary .cont01{
+            background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -5% -50%;
+            background-size: 30%;
+            transition: 0.5s;
+        }
+        .mainCon01 .dashCon.summary .cont01:hover{
+            background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -5% -50%;
+            background-size: 40%;
+            transition: 0.5s;
+        }
+        
+        .mainCon01 .dashCon.summary .cont02{
+            background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat -10% -25%;
+            background-size: 35%;
+            transition: 0.5s;
+        }
+        .mainCon01 .dashCon.summary .cont02:hover{
+            background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat -10% -25%;
+            background-size: 35%;
+            transition: 0.5s;
+        }
+        
+        .mainCon01 .dashCon.summary .cont03{
+            background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat -5% -20%;
+            background-size: 32%;
+            transition: 0.5s;
+        }
+        .mainCon01 .dashCon.summary .cont03:hover{
+            background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat -5% -20%;
+            background-size: 32%;
+            transition: 0.5s;
+        }
+        .mainCon02 .cont01 #first_chart,.mainCon02 .cont02 #second_chart{
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        .dashCon.summary{
+            height: 80%;
+        }
+        
+
+        .mainContent02{
+            display: block;
+        }
+        
+        .mainContent02 .mainCon{
+            display: block;
+        }
+        .mainContent02 .mainCon h3{
+            display: flex;
+            height: 60px;
+            font-size: 1.2em;
+        }
+        .titL,.titR{
+            margin: 0;
+            padding: 0;
+            font-size: 1.2em;
+        }
+        .titL{
+            width: 50%;
+        }
+        .titR{
+            width: 50%;
+        }
+        .titR a{
+
+        }
+        .titR button{
+            padding:4px 10px;
+            font-size: 0.8em;
+        }
+        .tables01{
+            margin: 0;
+        }
+        .mainContent02 .mainCon{
+            margin-bottom: 30px;
+        }
+        .tables01 table tbody{
+            font-size: 12px;
+        }
+        .tables01 table tr th{
+            padding: 8px 8px;
+            line-height: 1.4;
+            font-size: 16px;
+            word-break: break-word;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        body{
+            font-size: 12px;
+        }
+        .container .fullCon{
+            display: block;
+            grid-template-rows: none;
+        }
+        .container .content{
+        }
+        .mainCon{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .mainCon h3 i{
+            margin-right: 10px;
+        }
+        .mainContent01{
+            margin: 0 auto;
+            display: block;
+        }
+        .mainCon{
+            display: block;
+        }
+        .mainContent01 .mainCon h3{
+            padding-left: 0px;
+            height: 40px;
+            font-size: 1.2em;
+        
+        }
+        .mainCon01 .summary .cont p{
+            font-size: 1.4em;
+        }
+        .dashCon.summary{
+            margin-left: 0px;
+            padding: 0;
+            display: block;
+            grid-template-columns: none;
+            grid-gap: 0;
+        }
+        .dashCon.summary .cont{
+            margin-bottom: 20px;
+            padding: 8px;
+            display: block;
+        }
+        .mainCon01 .summary .cont h5{
+            font-size: 1em;
+        }
+        .mainCon01 .summary .cont .more{
+            display: block;
+        }
+        .mainCon01 .summary .cont a{
+            opacity: 1;
+            transform: none;
+            border-radius: 15px;
+            padding: 4px 0px;
+            float: right;
+            width: 27%;
+            font-size: 0.8em;
+        }
+        .mainContent02{
+            display: block;
+        }
+        
+        .mainContent02 .mainCon{
+            display: block;
+        }
+        .mainContent02 .mainCon h3{
+            display: flex;
+            height: 40px;
+            font-size: 14px;
+        }
+        .titL,.titR{
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        .titL{
+            width: 50%;
+        }
+        .titR{
+            width: 50%;
+        }
+        .titR a{
+
+        }
+        .titR button{
+            padding:4px 8px;
+            font-size: 0.8em;
+        }
+        .tables01{
+            margin: 0;
+        }
+        .mainContent02 .mainCon{
+            margin-bottom: 30px;
+        }
+        .tables01 table tbody{
+            font-size: 12px;
+        }
+        .tables01 table tr th{
+            padding: 5px 5px;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+        .tables01 table tr td{
+            line-height: 1.6;
+            padding: 5px 10px;
+        }
+        .tables01 table tr .downInfo{
+            font-size: 16px;
+        }
+
+
+        .mainCon01 .dashCon.summary .cont01{
+            background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -5% -50%;
+            background-size: 30%;
+            transition: 0.5s;
+        }
+        .mainCon01 .dashCon.summary .cont01:hover{
+            background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -5% -50%;
+            background-size: 40%;
+            transition: 0.5s;
+        }
+        
+        .mainCon01 .dashCon.summary .cont02{
+            background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat -10% -25%;
+            background-size: 35%;
+            transition: 0.5s;
+        }
+        .mainCon01 .dashCon.summary .cont02:hover{
+            background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat -10% -25%;
+            background-size: 35%;
+            transition: 0.5s;
+        }
+        
+        .mainCon01 .dashCon.summary .cont03{
+            background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat -5% -20%;
+            background-size: 32%;
+            transition: 0.5s;
+        }
+        .mainCon01 .dashCon.summary .cont03:hover{
+            background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat -5% -20%;
+            background-size: 32%;
+            transition: 0.5s;
+        }
+        .mainCon02 .cont01 #first_chart,.mainCon02 .cont02 #second_chart{
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+    }
+}

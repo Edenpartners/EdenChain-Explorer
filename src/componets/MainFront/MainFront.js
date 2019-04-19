@@ -6,12 +6,13 @@ import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import BlockHeightBox from '../Box/BlockHeightBox';
 import TotalTransactionBox from '../Box/TotalTransactionBox';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import TransactionFullList from '../Transaction/TransactionFullList';
+import styles from './flex_index.scss';
+
 
 class MainFront extends Component {
     render(){
         return (
-        <div className="wrapper">
+        <div className="MainFront wrapper">
 
            <HeaderMenu></HeaderMenu>
     

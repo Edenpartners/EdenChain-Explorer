@@ -52,7 +52,7 @@ body {
 }
 .container {
     font-family: 'Roboto', sans-serif;
-    padding-left: 60px;
+    padding-left: 70px;
     }
     
 .fixed{
@@ -65,7 +65,7 @@ body {
     z-index: 100;
 }
 
-header {
+.header {
     background: #fff;
     display: grid;
     grid-template-columns: 35% 30% 35%;
@@ -86,17 +86,17 @@ header {
     width: 200px;
 }
 
-header .search {
+.header .search {
     height: 50px;
     display: grid;
     grid-template-columns: 8fr 2fr;
     margin: 0 auto;
     align-items: center;
 }
-header .search label{
+.header .search label{
 
 }
-header .search a{
+.header .search a{
     float: left;
     font-size: 1.8em;
     color: #8b4ab8;
@@ -105,7 +105,7 @@ header .search a{
     cursor: pointer;
 }
 
-header .search input {
+.header .search input {
     border: 2px solid #8b4ab8;
     border-radius: 30px;
     height: 50px;
@@ -116,7 +116,7 @@ header .search input {
 }
 
 
-header .search button {
+.header .search button {
     border: 2px solid #8b4ab8;
     border-left: 0;
     border-radius: 0 30px 30px 0;
@@ -124,7 +124,7 @@ header .search button {
     background: none;
     color: #8b4ab8;
 }
-header .search button:hover{
+.header .search button:hover{
     background: #8b4ab8;
     color: #fff;
     cursor: pointer;
@@ -254,7 +254,7 @@ nav .menu li a {
     nav{
         width: 200px;
     }
-    header .search input{
+    .header .search input{
         height: 30px;
         width: 75%;
     }
@@ -297,39 +297,39 @@ nav .menu li a {
     .container{
         padding-left: 0;
     }
-    header {
+    .header {
         width: 100%;
         display: block;
         height: 110px;
     }
 
-    header .search input {
+    .header .search input {
         height: 25px;
         width: 150px;
         padding: 4px 10px;
     }
-    header .search a{
+    .header .search a{
         width: fit-content;
         justify-content: right;
         float: right;
         padding-top: 7px;
     }
 
-    header .search {
+    .header .search {
         grid-template-columns: none;
         width: 210px;
         display: block;
     }
-    header .search label{
+    .header .search label{
         float: left;
         height: 25px;
     }
 
-    header .search button {
+    .header .search button {
         height: 35px;
         width: 30px;
     }
-    header .search input{
+    .header .search input{
         height: 30px;
     }
 
