@@ -4,10 +4,13 @@ body,
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 div,
 ul,
 li,
-span,p,
+span,p,i,
 input,
 button,
 table,
@@ -39,23 +42,27 @@ a:active {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-
+    border: 2px solid pink;
+    height: 100vh;
+}
+#root{
+    width: 100%;
 }
 
 .wrapper {
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 0;
     clear: both;
     width: 100%;
     min-width: 370px;
+    
 }
 .container {
     font-family: 'Roboto', sans-serif;
     padding-left: 70px;
     font-size: 16px;
 }
-    }
     
 .fixed{
 
