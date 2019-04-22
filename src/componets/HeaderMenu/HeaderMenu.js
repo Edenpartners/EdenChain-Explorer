@@ -25,31 +25,31 @@ class HeaderMenu extends Component{
                 <div className="navCon">
                     <ul className="menu">
                         <li><Link to="/">
-                                <ul className="menu_tit">
-                                    <li>
-                                        <p>Explore</p>
-                                    </li>
-                                    <li><i className="eden-home"></i></li>
-                                </ul>
-                            </Link></li>
+                            <ul className="menu_tit">
+                                <li>
+                                    <p>Explore</p>
+                                </li>
+                                <li><i className="eden-home"></i></li>
+                            </ul>
+                        </Link></li>
 
                         <li><Link to="/blocklist">
-                                <ul className="menu_tit">
-                                    <li>
-                                        <p>Block</p>
-                                    </li>
-                                    <li><i className="eden-grid"></i></li>
-                                </ul>
-                            </Link></li>
+                            <ul className="menu_tit">
+                                <li>
+                                    <p>Block</p>
+                                </li>
+                                <li><i className="eden-grid"></i></li>
+                            </ul>
+                        </Link></li>
 
                         <li><Link to="/txlist">
-                                <ul className="menu_tit">
-                                    <li>
-                                        <p>Transaction</p>
-                                    </li>
-                                    <li><i className="eden-map"></i></li>
-                                </ul>
-                                </Link></li>
+                            <ul className="menu_tit">
+                                <li>
+                                    <p>Transaction</p>
+                                </li>
+                                <li><i className="eden-map"></i></li>
+                            </ul>
+                        </Link></li>
                     </ul>
                     </div>
                 </nav>

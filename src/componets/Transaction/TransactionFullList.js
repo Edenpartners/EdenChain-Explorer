@@ -17,14 +17,14 @@ class TransactionFullList extends Component {
 
                   <section className="tblWrapp">
                     
-                    <div className="tbl-header">
+                    <div className="tbl-con tbl-header">
                       
                       <table cellpadding="0" cellspacing="0" border="0">
                         <thead>
                           <tr>
                             <th width="10%">NO</th>
                             <th width="10%">TX Hash</th>
-                            <th width="20%">Block NO</th>
+                            <th width="20%" class="none">Block NO</th>
                             <th width="20%">생성시간</th>
                             <th width="20%">Before_transaction_ids</th>
                             <th width="20%">Request_transaction_amount</th>
@@ -36,7 +36,7 @@ class TransactionFullList extends Component {
 
 
 
-                    <div className="tbl-content">
+                    <div className="tbl-con tbl-content">
                       
                       <table cellpadding="0" cellspacing="0" border="0">
                         <tbody>

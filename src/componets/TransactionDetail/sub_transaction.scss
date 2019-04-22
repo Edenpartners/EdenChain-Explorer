@@ -181,7 +181,11 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     line-height: 1;
-    word-wrap: break-word;
+
+
+
+
+      word-wrap: break-word;
   }
   .tblWrapp table td{
     padding: 15px;
@@ -347,9 +351,6 @@
     justify-content: right;
     float: right;
     padding-top: 7px;
-    }
-    .nav-toggle-btn .eden-align-justify{
-      color: #fff;
     }
     /*모든서브공통 e*/
 

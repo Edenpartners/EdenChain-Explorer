@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
-import styles from './sub.scss';
+import './sub.scss';
 
 class BlockFullList extends Component {
     render() {
@@ -12,7 +12,7 @@ class BlockFullList extends Component {
                 <div className="container">
 
                     <div className="fixed">
-                        <div className="fullCon" id="fullCon">
+                        <div className="content" id="fullCon">
 
                             <h3><i className="eden-box"></i>Block List <span>Data Information for Developer</span></h3>
                             <div className="tables02">
