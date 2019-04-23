@@ -260,6 +260,7 @@ class BlockFullList extends Component {
                                 </div>
 
                             </div>
+                       
                         </div>
                     </div>
                 </div>
