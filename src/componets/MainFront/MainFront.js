@@ -90,130 +90,132 @@ class MainFront extends Component {
                                             </tr>
     
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="/blocklist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="/blocklist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>888</span>
+                                                <td><a href="/blocklist">
+                                                    <span>888</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
     
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="/blocklist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="/blocklist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>888</span>
+                                                <td><a href="/blocklist">
+                                                    <span>888</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
-    
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="/blocklist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="/blocklist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>888</span>
+                                                <td><a href="/blocklist">
+                                                    <span>888</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
-    
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="/blocklist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="/blocklist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>888</span>
+                                                <td><a href="/blocklist">
+                                                    <span>888</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
-    
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="/blocklist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="/blocklist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>888</span>
+                                                <td><a href="/blocklist">
+                                                    <span>888</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard" >
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
-    
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="/blocklist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="/blocklist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>888</span>
+                                                <td><a href="/blocklist">
+                                                    <span>888</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
-    
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="/blocklist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="/blocklist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>888</span>
+                                                <td><a href="/blocklist">
+                                                    <span>888</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard" >
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
+
+                                            
     
                                         </tbody>
     
@@ -250,102 +252,125 @@ class MainFront extends Component {
                                             </tr>
     
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="./txlist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="./txlist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
-    
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="./txlist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="./txlist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
     
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="./txlist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="./txlist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
     
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="./txlist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="./txlist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
     
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="./txlist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="./txlist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
     
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="./txlist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="./txlist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
     
+
                                             <tr>
-                                                <td className="blockId">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span>
+                                                <td className="blockId"><a href="./txlist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
                                                 </td>
     
-                                                <td>
-                                                    <span>666</span>
+                                                <td><a href="./txlist">
+                                                    <span>666</span></a>
                                                 </td>
     
-                                                <td className="downInfo">
+                                                <td className="downInfo" title="Downloard">
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
+    
+
+                                            <tr>
+                                                <td className="blockId"><a href="./txlist">
+                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
+                                                </td>
+    
+                                                <td><a href="./txlist">
+                                                    <span>666</span></a>
+                                                </td>
+    
+                                                <td className="downInfo" title="Downloard">
+                                                    <a href=""><i className="eden-file"></i></a>
+                                                </td>
+                                            </tr>
+    
+    
+                                            
     
                                         </tbody>
     

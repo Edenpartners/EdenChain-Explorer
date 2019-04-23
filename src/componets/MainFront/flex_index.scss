@@ -474,10 +474,14 @@
 .tables01 table tr td:last-child{
     border-right: none;
 }
-.tables01 table tr:hover{
+.tables01 table tr:hover td{
     background: rgba(107,110,206,0.8);
     color: #fff;
     transition: 0.3s;
+    cursor: pointer;
+}
+.tables01 table tr:hover td a{
+    color: #fff;
     cursor: pointer;
 }
 

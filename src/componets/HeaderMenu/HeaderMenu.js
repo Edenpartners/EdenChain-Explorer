@@ -18,14 +18,14 @@ class HeaderMenu extends Component{
         let header =  (
          <div className="HeaderMenu">
             <nav>
-                <div className="nav-toggle-btn" onClick={(e) => this.handleClick(e)}>
+                <div className="nav-toggle-btn" title="Menu" onClick={(e) => this.handleClick(e)}>
                     <i className="eden-align-justify"></i>
                 </div>
 
                 <div className="navCon">
                     <ul className="menu">
                         <li><Link to="/">
-                            <ul className="menu_tit">
+                            <ul className="menu_tit" title="Home">
                                 <li>
                                     <p>Explore</p>
                                 </li>
@@ -34,7 +34,7 @@ class HeaderMenu extends Component{
                         </Link></li>
 
                         <li><Link to="/blocklist">
-                            <ul className="menu_tit">
+                            <ul className="menu_tit" title="Block">
                                 <li>
                                     <p>Block</p>
                                 </li>
@@ -43,7 +43,7 @@ class HeaderMenu extends Component{
                         </Link></li>
 
                         <li><Link to="/txlist">
-                            <ul className="menu_tit">
+                            <ul className="menu_tit" title="Transaction">
                                 <li>
                                     <p>Transaction</p>
                                 </li>

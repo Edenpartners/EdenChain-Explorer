@@ -39,9 +39,10 @@ class TransactionDetail extends Component {
 
                                 <tr>
                                     <th>Transaction</th>
-                                    <td><a href="">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-                                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-                                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</a></td>
+                                    <td>
+                                        <a href="./txlist"><span>hhhhhhhhhhhhhh</span></a>
+                                        <button>read more</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
