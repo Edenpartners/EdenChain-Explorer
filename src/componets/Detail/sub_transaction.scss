@@ -1,0 +1,389 @@
+/*header*/
+
+
+
+/*detail 공통 s*/
+
+.TransactionDetail {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    min-width: 370px;
+
+    #header {
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .header {
+        background: #fff;
+        display: grid;
+        grid-template-columns: 35% 30% 35%;
+        min-height: 80px;
+        border-bottom: 2px solid #111;
+        align-items: center;
+    }
+
+    .logoDiv {
+        margin-left: 90px;
+    }
+
+    .logoDiv h1 {}
+
+    .logoDiv h1 a {}
+
+    .logoDiv h1 a img {
+        width: 200px;
+        margin-top: 15px;
+    }
+    .HeaderMenu {
+        font-size: 16px;
+    }
+    .header .search {
+        height: 50px;
+        display: grid;
+        grid-template-columns: 8fr 2fr;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .header .search label {}
+
+    .header .search a {
+        float: left;
+        font-size: 1.8em;
+        color: #8b4ab8;
+        font-weight: bold;
+        display: grid;
+        cursor: pointer;
+    }
+
+    .header .search input {
+        border: 2px solid #8b4ab8;
+        border-radius: 30px;
+        height: 35px;
+        font-size: 1em;
+        color: #1d4482;
+        width: 83%;
+        padding: 4px 20px;
+    }
+
+
+    .header .search button {
+        border: 2px solid #8b4ab8;
+        border-left: 0;
+        border-radius: 0 30px 30px 0;
+        font-size: 18px;
+        background: none;
+        color: #8b4ab8;
+    }
+
+    .header .search button:hover {
+        background: #8b4ab8;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .content {
+        transition: transform 0.4s ease;
+        height: 100%;
+    
+    }
+
+    .container {
+        padding-left: 70px;
+        font-size: 16px;
+    }
+    .container .content {
+        margin-left: 50px;
+        margin-top: 130px;
+    }
+    
+    .header.content {
+        height: 130px;
+    }
+    .container .fixed{
+        padding-left: 30px;
+    }
+    .fixed h3{
+        color: #1D4482;
+        font-size: 1.6em;
+        font-weight: bold;
+        line-height: 3;
+    }
+    .fixed h3 span{
+
+    }
+    .fixed h3 i{
+        margin-right: 18px;
+        font-size: 1.2em;
+    }
+    .fixed .detailBox{
+        padding-left: 50px;
+    }
+    .fixed h4{
+        font-size: 1.25em;
+        color: #8b4ab8;
+    }
+    .fixed h4 span a{
+        margin-left: 10px;
+        border: 1px solid #8b4ab8;
+        background: #8b4ab8;
+        padding: 0px 10px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 0.8em;
+        font-weight: normal;
+        cursor: pointer;
+    }
+
+    .detailBox table{
+        border: 1px solid #F2F7FC;
+        width: 70%;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 20px;
+        font-size: 1.2em;
+        box-shadow: 0px 0px 30px 0px rgba(95,95,175,0.2);
+    }
+    .detailBox table tr{
+        height: 10px;
+    }
+    .detailBox table th{
+        -webkit-box-shadow:  2px 0 3px -3px rgba(95,95,175,0.8);
+        box-shadow: 4px 0 3px -3px rgba(95,95,175,0.8);
+        line-height: 0;
+        text-align: left;
+        width: 10%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: word-break;
+        line-height: 2;
+        padding-right: 10px;
+    }
+    .detailBox table td{
+        width: 90%;
+        padding-left: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    }
+    .detailBox table td i{
+        padding-left:10px;
+    }
+
+    // .active-nav .content {
+    //     transform: translate3d(200px, 0, 0);
+    // }
+}
+
+/*detail 공통 e*/
+
+
+/*반응형*/
+
+.TransactionDetail {
+
+    @media screen and (max-width: 1400px) {}
+
+    @media screen and (min-width: 501px) and (max-width: 959px) {
+        .fixed h3{
+            color: #1D4482;
+            font-size: 1.2em;
+            font-weight: bold;
+            line-height: 3;
+        }
+        .fixed h3 span{
+    
+        }
+        .fixed h3 i{
+            margin-right: 10px;
+            font-size: 1em;
+        }
+        .fixed .detailBox{
+            padding-left: 30px;
+        }
+        .fixed h4{
+            font-size: 1em;
+            color: #8b4ab8;
+        }
+        .fixed h4 span a{
+            font-size: 0.6em;
+        }
+    
+        .detailBox table{
+            font-size: 1em;
+            width: 85%;
+        }
+        .detailBox table tr{
+            height: 10px;
+        }
+        .detailBox table th{
+
+            line-height: 1.6;
+        }
+        .detailBox table td{
+
+        }
+        .detailBox table td i{
+            padding-left:10px;
+        }
+        /*detail 공통 s*/
+        .container {
+        }
+
+        .logoDiv h1 a img {
+            width: 150px;
+            margin-top: 20px;
+        }
+
+        .header .search input {
+            height: 30px;
+            width: 75%;
+        }
+
+        /*detail 공통 e*/
+
+
+
+
+    }
+
+    @media screen and (max-width: 500px) {
+  
+            font-size: 16px;
+
+
+        #header {
+            position: inherit;
+        }
+
+        .container {
+            padding-left: 0;
+        }
+
+        .header {
+            width: 100%;
+            display: block;
+            height: 110px;
+        }
+
+        .header .search input {
+            height: 25px;
+            width: 150px;
+            padding: 4px 10px;
+        }
+
+        .header .search a {
+            width: fit-content;
+            justify-content: right;
+            float: right;
+            padding-top: 7px;
+        }
+
+        .header .search {
+            grid-template-columns: none;
+            width: 210px;
+            display: block;
+        }
+
+        .header .search label {
+            float: left;
+            height: 25px;
+        }
+
+        .header .search button {
+            height: 35px;
+            width: 30px;
+        }
+
+        .header .search input {
+            height: 30px;
+        }
+
+        .header.content {
+            height: 130px;
+        }
+
+        .logoDiv {
+            margin: 0 auto;
+        }
+
+        .logoDiv h1 {
+            width: 120px;
+            margin: 10px auto;
+        }
+
+        .logoDiv h1 a img {
+            width: 120px;
+        }
+
+
+
+        .container .fixed{
+            padding-left: 0;
+            width: 85%;
+            margin: 0 auto;
+        }
+        .fixed h3{
+            color: #1D4482;
+            font-size: 1.2em;
+            font-weight: bold;
+            line-height: 3;
+        }
+        .fixed h3 span{
+    
+        }
+        .fixed h3 i{
+            margin-right: 10px;
+            font-size: 1em;
+        }
+        .fixed .detailBox{
+            padding-left: 0px;
+            width: 100%;
+            margin:  0 auto;
+            margin-bottom: 50px;
+        }
+        .fixed h4{
+            font-size: 1em;
+            color: #8b4ab8;
+            line-height: 1;
+        }
+        .fixed h4 span a{
+            font-size: 0.6em;
+        }
+    
+        .detailBox table{
+            font-size: 1em;
+            width: 100%;
+        }
+        .detailBox table tr{
+            height: 10px;
+        }
+        .detailBox table th{
+
+            line-height: 1.6;
+        }
+        .detailBox table td{
+
+        }
+        .detailBox table td i{
+            padding-left:10px;
+        }
+        /*detail 공통 s*/
+        .container {
+        }
+
+
+ 
+        /*detail 공통 e*/
+
+
+
+
+
+
+    }
+}

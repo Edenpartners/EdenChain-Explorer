@@ -62,9 +62,9 @@ class MainFront extends Component {
                                     <i className="eden-box"></i>Block List</span>
                                     <span className="titR">
                                         
-                                        <Link to="/blocklist">
+                                        <a href="/blocklist">
                                             <button type="button">view all</button>
-                                        </Link> </span>
+                                        </a> </span>
                                 </h3>
     
     
@@ -229,7 +229,7 @@ class MainFront extends Component {
                             <div className="mainCon mainCon02">
                                 <h3>
                                     <span className="titL"><i className="eden-database"></i>Transaction List</span>
-                                    <span className="titR"><Link to="/txlist"><button type="button">view all</button></Link> </span>
+                                    <span className="titR"><a href="/txlist"><button type="button">view all</button></a> </span>
                                 </h3>
                                 <div className="tables01 conT">
                                     

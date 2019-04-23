@@ -4,9 +4,9 @@ import './App.css';
 import MainFront from './componets/MainFront/MainFront';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import TransactionFullList from './componets/Transaction/TransactionFullList';
-import TransactionDetail from './componets/TransactionDetail/TransactionDetail';
+import TransactionDetail from './componets/Detail/TransactionDetail';
 import BlockFullList from './componets/Block/BlockFullList';
-import BlockDetail from './componets/BlockDetail/BlockDetail';
+import BlockDetail from './componets/Detail/BlockDetail';
 
 class App extends Component {
   render() {
