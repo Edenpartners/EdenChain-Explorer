@@ -9,7 +9,7 @@
    background: linear-gradient(to right, #8b4ab8, #1d4482); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b4ab8', endColorstr='#1d4482',GradientType=0 ); /* IE6-9 */
    min-height: none;
-   height: -webkit-fill-available;
+   height: fit-content;
 
 
  #header {
@@ -222,9 +222,8 @@
     .tbUl03 .con02{
         padding-left: 30px;
     }
-
-
-
+/**/
+    
     
     /*media query*/
     @media screen and (max-width: 1280px) {
@@ -359,6 +358,7 @@
     float: right;
     padding-top: 7px;
     }
+
           /*모든서브공통 e*/
         }
     }

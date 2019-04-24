@@ -1,11 +1,11 @@
 /*container*/
-.Footer {
+footer {
     position: relative;
     bottom: 0;
     margin-top: 100px;
 
     .footerCon{
-        background: #F2F7FC;
+        background: transparent;
         margin-left: 70px;
         padding: 50px 50px 50px 0;
         height: auto;
@@ -23,13 +23,14 @@
     
     }
     .col .widget h4{
-        border-bottom: 2px solid #575a65;
+        border-bottom: 2px solid #fff;
         font-weight: 600;
         padding-bottom: 16px;
         font-size: 1em;
         line-height: 25px;
         letter-spacing: 2px;
         margin:10px 0;
+        color: #fff;
     }
     .col #text-1{
         width: 70%;
@@ -43,27 +44,32 @@
         font-size: 1em;
         margin: 7px 0;
     }
+    .fMenu ul li a{
+        color: #fff;
+    }
     .col #text-1 p img{
         width: 100px;
     }
     .col .widget{
         width: 70%;
         margin: 20px auto;
+        color: #fff;
     }
     .col .bottom-edge{
         padding-top: 40px;
     }
+
     .widget05 button{
-        border:2px solid rgba(139,74,184,0.75);
-        color: rgba(139,74,184,0.75);
+        border:2px solid rgba(255,255,255,0.75);
+        color: rgba(255,255,255,0.75);
         padding: 5px 10px;
         font-size: 0.8em;
         font-weight: 700;
         background: transparent;
     }
     .widget05 button:hover{
-        border:2px solid rgba(139,74,184,1);
-        color: rgba(139,74,184,1);
+        border:2px solid rgba(255,255,255,1);
+        color: rgba(255,255,255,1);
         cursor: pointer;
         transition: 0.2s;
     }
@@ -88,9 +94,6 @@
         .footerCon{
             margin-left: 50px;
             padding-left: 50px;
-        }
-        .col #text-1{
-            width: 80%;
         }
         .col #text-1 p{
             font-size: 1em;
@@ -127,7 +130,7 @@
             font-size: 1em;
         }
         .col .widget{
-            width: 80%;
+            width: 70%;
         }
         .col .widget h4{
             font-size: 1em;

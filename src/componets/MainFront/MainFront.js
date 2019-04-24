@@ -3,7 +3,7 @@ import TxDayChart from '../Charts/TxDayChart';
 import TxHourChart from '../Charts/TxHourChart';
 import BlockDayChart from '../Charts/BlockDayChart';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
-import Footer from '../Footer/footer';
+import Footer from '../Footer/footer.js';
 import BlockHeightBox from '../Box/BlockHeightBox';
 import TotalTransactionBox from '../Box/TotalTransactionBox';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";

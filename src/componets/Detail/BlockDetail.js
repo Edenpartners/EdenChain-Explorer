@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
+import Footer from '../Footer/footer';
 import styles from './sub_transaction.scss';
 
 class TransactionDetail extends Component {
@@ -51,7 +52,8 @@ class TransactionDetail extends Component {
                     </div>
                 </div>
                </div>
-             </div>
+               <Footer></Footer>
+            </div>
 
         );
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from '../SubFooter/footer';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import './sub.scss';
 
@@ -260,11 +261,13 @@ class BlockFullList extends Component {
                                 </div>
 
                             </div>
-                       
+                            
                         </div>
+                        
                     </div>
+                    
                 </div>
-
+                <Footer></Footer>
             </div>
 
         );
