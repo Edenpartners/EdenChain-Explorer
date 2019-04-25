@@ -53,7 +53,7 @@ class BlockDayChart extends Component{
                 text: 'Blocks',
                 fontSize:14,
                 fontFamily:"'Hind',sans-serif",
-                fontColor: '#194e4f',
+                fontColor: 'rgba(25, 78, 79, 1)',
                 fontStyle:'bold',
                 padding:10,
                 lineHeight:1.8,

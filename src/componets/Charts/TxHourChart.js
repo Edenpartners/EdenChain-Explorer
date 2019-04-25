@@ -82,7 +82,7 @@ class TxHourChart extends Component{
                 text: '24 hours Transaction',
                 fontSize:14,
                 fontFamily:"'Hind',sans-serif",
-                fontColor: '#333',
+                fontColor: 'rgba(25, 78, 79, 1)',
                 fontStyle:'bold',
                 padding:10,
                 lineHeight:1.8,
