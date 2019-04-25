@@ -153,7 +153,7 @@
 }
 
 .dashCon.summary .cont {
-    background: #fcf8f7;
+    background: #F7F7F7;
     display: grid;
     align-items: center;
     padding: 0 20px;
@@ -286,7 +286,7 @@
     opacity: 1;
     visibility: visible;
 }
-.mainCon01 .summary .cont03:hover a{
+.mainCon01 .summary .cont04:hover a{
     transform: translateY(0px);
     opacity: 1;
     visibility: visible;
@@ -295,34 +295,34 @@
 .dashCon.summary .cont01{
 }
 .mainCon01 .dashCon.summary .cont01{
-    background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat 120% -65%;
+    background: url('/images/baseline-blur04.svg') #F7F7F7 no-repeat 120% -65%;
     background-size: 40%;
     transition: 0.5s;
 }
 .mainCon01 .dashCon.summary .cont01:hover{
-    background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat 110% 0%;
+    background: url('/images/baseline-blur04.svg') #F7F7F7 no-repeat 110% 0%;
     background-size: 35%;
     transition: 0.5s;
 }
 
 .mainCon01 .dashCon.summary .cont02{
-    background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat 120% -65%;
+    background: url('/images/baseline-graphic04.svg') #F7F7F7 no-repeat 120% -65%;
     background-size: 40%;
     transition: 0.5s;
 }
 .mainCon01 .dashCon.summary .cont02:hover{
-    background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat 105% 0%;
+    background: url('/images/baseline-graphic04.svg') #F7F7F7 no-repeat 105% 0%;
     background-size: 35%;
     transition: 0.5s;
 }
 
 .mainCon01 .dashCon.summary .cont03{
-    background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat 120% -65%;
+    background: url('/images/baseline-restore04.svg') #F7F7F7 no-repeat 120% -65%;
     background-size: 40%;
     transition: 0.5s;
 }
 .mainCon01 .dashCon.summary .cont03:hover{
-    background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat 110% 0%;
+    background: url('/images/baseline-restore04.svg') #F7F7F7 no-repeat 110% 0%;
     background-size: 35%;
     transition: 0.5s;
 }
@@ -379,11 +379,7 @@
     cursor: pointer;
 }
 .titR button:hover{
-    border: none;
-    background: -moz-linear-gradient(-45deg, #9AC4E9 2%, #D5B4EF 100%); 
-    background: -webkit-linear-gradient(-45deg, #9AC4E9 2%,#D5B4EF 100%);
-    background: linear-gradient(135deg, #9AC4E9 2%,#D5B4EF 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9AC4E9', endColorstr='#D5B4EF',GradientType=1 ); 
+    background: rgba(0,150,136,1);
     transition: 0.2s;
     color: #fff;
     cursor: pointer;
@@ -450,7 +446,7 @@
     font-size: 1.2em;
     line-height: 1.6;
     border-bottom: 2px solid #b2b2b2;
-    background: #fcf8f7;
+    background: #F7F7F7;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -533,7 +529,7 @@
 .tables01 table{
 }
 .tables01 table .odd,.tables01 table .odd tr{
-    background: #fcf8f7;
+    background: #F7F7F7;
     width: 100%;
 }
 
@@ -592,34 +588,34 @@
 @media screen and (max-width: 1400px) {
     
     .mainCon01 .dashCon.summary .cont01{
-        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat 120%  -10%;
+        background: url('/images/baseline-blur04.svg') #F7F7F7 no-repeat 120%  -10%;
         background-size: 40%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont01:hover{
-        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat 120%  20%;
+        background: url('/images/baseline-blur04.svg') #F7F7F7 no-repeat 120%  20%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont02{
-        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat 120%  -10%;
+        background: url('/images/baseline-graphic04.svg') #F7F7F7 no-repeat 120%  -10%;
         background-size: 40%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont02:hover{
-        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat 120%  20%;
+        background: url('/images/baseline-graphic04.svg') #F7F7F7 no-repeat 120%  20%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont03{
-        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat 120%  -10%;
+        background: url('/images/baseline-restore04.svg') #F7F7F7 no-repeat 120%  -10%;
         background-size: 40%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont03:hover{
-        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat 110% 0%;
+        background: url('/images/baseline-restore04.svg') #F7F7F7 no-repeat 110% 0%;
         background-size: 40%;
         transition: 0.5s;
     }
@@ -708,34 +704,34 @@
     }
 
     .mainCon01 .dashCon.summary .cont01{
-        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat -10% -25%;
+        background: url('/images/baseline-blur04.svg') #F7F7F7 no-repeat -10% -25%;
         background-size: 35%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont01:hover{
-        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat -10% -25%;
+        background: url('/images/baseline-blur04.svg') #F7F7F7 no-repeat -10% -25%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont02{
-        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat -10% -25%;
+        background: url('/images/baseline-graphic04.svg') #F7F7F7 no-repeat -10% -25%;
         background-size: 35%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont02:hover{
-        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat -10% -25%;
+        background: url('/images/baseline-graphic04.svg') #F7F7F7 no-repeat -10% -25%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont03{
-        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat -5% -20%;
+        background: url('/images/baseline-restore04.svg') #F7F7F7 no-repeat -5% -20%;
         background-size: 32%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont03:hover{
-        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat -5% -20%;
+        background: url('/images/baseline-restore04.svg') #F7F7F7 no-repeat -5% -20%;
         background-size: 37%;
         transition: 0.5s;
     }
@@ -823,7 +819,6 @@
         float: right;
         padding-top: 7px;
     }
-
     .header .search {
         grid-template-columns: none;
         width: 210px;
@@ -978,34 +973,34 @@
 
 
     .mainCon01 .dashCon.summary .cont01{
-        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat -5% -50%;
+        background: url('/images/baseline-blur04.svg') #F7F7F7 no-repeat -5% -50%;
         background-size: 30%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont01:hover{
-        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat -5% -50%;
+        background: url('/images/baseline-blur04.svg') #F7F7F7 no-repeat -5% -50%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont02{
-        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat -10% -25%;
+        background: url('/images/baseline-graphic04.svg') #F7F7F7 no-repeat -10% -25%;
         background-size: 35%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont02:hover{
-        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat -10% -25%;
+        background: url('/images/baseline-graphic04.svg') #F7F7F7 no-repeat -10% -25%;
         background-size: 35%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont03{
-        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat -5% -20%;
+        background: url('/images/baseline-restore04.svg') #F7F7F7 no-repeat -5% -20%;
         background-size: 32%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont03:hover{
-        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat -5% -20%;
+        background: url('/images/baseline-restore04.svg') #F7F7F7 no-repeat -5% -20%;
         background-size: 32%;
         transition: 0.5s;
     }

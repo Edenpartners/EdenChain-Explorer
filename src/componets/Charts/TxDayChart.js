@@ -19,7 +19,7 @@ class TxDayChart extends Component{
                     pointBorderWidth:2,
                     pointHoverBorderWidth:4,
                     pointHoverBorderColor:'rgba(25, 78, 79, 1)',
-                    borderWidth: 1
+                    borderWidth: 0.5
                 }]
             };
 
