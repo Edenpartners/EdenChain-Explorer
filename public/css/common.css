@@ -41,7 +41,7 @@ a:active {
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     height: 100vh;
 }
 #root{
@@ -59,7 +59,7 @@ body {
 }
 .container {
     font-family: 'Roboto', sans-serif;
-    padding-left: 70px;
+    padding-left: 50px;
     font-size: 16px;
 }
     
@@ -77,14 +77,14 @@ nav {
     background-color: #f98d78;
     transform: translate3d(-200px, 0, 0);
     transition: transform 0.4s ease;
-    width: 270px;
+    width: 240px;
 }
 
 .nav-toggle-btn {
     display: block;
     position: absolute;
     left: 0px;
-    width: 270px;
+    width: 250px;
     height: 130px;
     background-color: #f98d78;
     cursor: pointer;
@@ -100,11 +100,12 @@ nav {
     color: #fff;
     position: absolute;
     bottom: 50px;
-    right: 20px;
+    right: 15px;
 }
 
 .active-nav nav {
     transform: translate3d(0, 0, 0);
+    width: 200px;
 }
 
 nav .navCon {
@@ -112,7 +113,7 @@ nav .navCon {
     position: absolute;
     top: 130px;
     left: 0px;
-    width: 270px;
+    width: 250px;
     height: 100%;
     background: #f98d78; /* Old browsers */
 }
@@ -154,14 +155,14 @@ nav .menu li a {
 
 .menu_tit li:last-child {
     text-align: right;
-    padding-right: 50px;
+    padding-right: 18px;
 }
 
 @media screen and (max-width: 1280px) {}
 
 @media screen and (min-width:501px) and (max-width: 959px) {
     nav{
-        width: 200px;
+        width: 240px;
     }
     .nav-toggle-btn .eden-align-justify{
         font-size: 1em;
@@ -177,7 +178,7 @@ nav .menu li a {
     }
 
     .nav-toggle-btn {
-        width: 250px;
+        width: 240px;
     }
 
     .nav-toggle-btn:hover {
@@ -186,13 +187,13 @@ nav .menu li a {
 
     .active-nav .nav-toggle-btn {
         width: 200px;
-        background:#009688;
+        background:#f98d78;
     }
     .active-nav nav .navCon{
         width: 200px;
     }
     nav .navCon{
-        width: 250px;
+        width: 240px;
     }
 }
 @media screen and (max-width: 500px) {
@@ -217,7 +218,7 @@ nav .menu li a {
 
     .active-nav .nav-toggle-btn {
         width: 130px;
-        background:#009688;
+        background:#f98d78;
     }
 
     nav .navCon {

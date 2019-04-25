@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Footer from '../SubFooter/footer';
+import Footer from '../Footer/footer';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import styles from './sub_transaction.scss';
 

@@ -9,12 +9,6 @@
     font-size: 18px;
     min-width: 370px;
 
-    #header {
-        position: fixed;
-        width: 100%;
-        z-index: 100;
-    }
-
     .header {
         background: #fff;
         display: grid;
@@ -23,17 +17,17 @@
         border-bottom: 2px solid #111;
         align-items: center;
     }
-
+    
     .logoDiv {
         margin-left: 90px;
     }
-
+    
     .logoDiv h1 {}
-
+    
     .logoDiv h1 a {}
-
+    
     .logoDiv h1 a img {
-        width: 200px;
+        width: 160px;
         margin-top: 15px;
     }
     .HeaderMenu {
@@ -46,67 +40,100 @@
         margin: 0 auto;
         align-items: center;
     }
-
+    
     .header .search label {}
-
+    
     .header .search a {
         float: left;
         font-size: 1.8em;
-        color: #8b4ab8;
+        color: #f98d78;
         font-weight: bold;
         display: grid;
         cursor: pointer;
     }
-
+    
     .header .search input {
-        border: 2px solid #8b4ab8;
+        border: 2px solid #f98d78;
         border-radius: 30px;
         height: 35px;
         font-size: 1em;
-        color: #1d4482;
+        color: #009688;
         width: 83%;
         padding: 4px 20px;
     }
-
-
+    
+    
     .header .search button {
-        border: 2px solid #8b4ab8;
+        border: 2px solid #f98d78;
         border-left: 0;
         border-radius: 0 30px 30px 0;
         font-size: 18px;
         background: none;
-        color: #8b4ab8;
+        color: #f98d78;
     }
-
+    
     .header .search button:hover {
-        background: #8b4ab8;
+        background: #f98d78;
         color: #fff;
         cursor: pointer;
         transition: 0.2s;
     }
-    .content {
-        transition: transform 0.4s ease;
-        height: 100%;
+     
+     
+     .content {
+         transition: transform 0.4s ease;
+         height: 100%;
+     
+     }
+     .container{
+         font-size: 14px;
+         margin-bottom: 100px;
+     }
+     .container .content {
+         width: 95%;
+         margin: 0 auto;
+     }
+     .container .content h3{
+       font-weight: bold;
+       color: #333;
+       line-height: 3;
+       font-size: 1.2em;
+     }
+     .container .content h3 i{
+       margin-right: 18px;
+     }
+     .container .content span{
+       font-weight: 200;
+       margin-left: 20px;
+       border-left: 1px solid #333;
+       padding-left: 20px;
+     }
+     
+     .header.content {
+         height: 130px;
+         background: rgba(255,255,255,0.3);
+     }
+     // .active-nav .content {
+     //     transform: translate3d(200px, 0, 0);
+     // }
     
-    }
+     ::-webkit-scrollbar {
+         width: 6px;
+     } 
+     ::-webkit-scrollbar-track {
+         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+     } 
+     ::-webkit-scrollbar-thumb {
+         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+     }
 
-    .container {
-        padding-left: 70px;
-        font-size: 16px;
-    }
-    .container .content {
-        margin-left: 50px;
-        margin-top: 130px;
-    }
-    
-    .header.content {
-        height: 130px;
-    }
+
+
     .container .fixed{
         padding-left: 30px;
     }
     .fixed h3{
-        color: #1D4482;
+        color: #333;
         font-size: 1.6em;
         font-weight: bold;
         line-height: 3;
@@ -123,48 +150,59 @@
     }
     .fixed h4{
         font-size: 1.25em;
-        color: #8b4ab8;
+        color: #f98d78;
     }
     .fixed h4 span a{
-        margin-left: 10px;
-        border: 1px solid #8b4ab8;
-        background: #8b4ab8;
-        padding: 0px 10px;
-        display: inline-block;
-        text-align: center;
-        border-radius: 20px;
+      
+    }
+    .fixed h4 span a{
+        color: #009688;
+    }
+    .fixed h4 span{
+        padding: 2px 10px;
+        border-radius: 15px;
+        color: #009688;
+        font-size: 0.6em;
+        position: relative;
+        top: -10px;
+        border: 1px solid #009688;
+    }
+    .fixed h4 span:hover a{
         color: #fff;
-        font-size: 0.8em;
-        font-weight: normal;
+    }
+    .fixed h4 span:hover{
+        color: #fff;
+        background: #009688;
+        transition: 0.2s;
         cursor: pointer;
     }
 
     .detailBox table{
-        border: 1px solid #F2F7FC;
-        width: 70%;
+        border: 1px solid #f98d78;
+        width: 700px;
         padding: 15px;
         margin-top: 15px;
         border-radius: 20px;
         font-size: 1.2em;
-        box-shadow: 0px 0px 30px 0px rgba(95,95,175,0.2);
+        background: #F7F7F7;
     }
     .detailBox table tr{
-        height: 10px;
+        height: 20px;
     }
     .detailBox table th{
-        -webkit-box-shadow:  2px 0 3px -3px rgba(95,95,175,0.8);
-        box-shadow: 4px 0 3px -3px rgba(95,95,175,0.8);
+        -webkit-box-shadow:  2px 0 10px -3px rgba(0,0,0,0.5);
+        box-shadow: 4px 0 1px -3px rgba(0,0,0,0.5);
         line-height: 0;
         text-align: left;
-        width: 10%;
+        width: 16%;
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: word-break;
-        line-height: 2;
+        line-height: 1.2;
         padding-right: 10px;
     }
     .detailBox table td{
-        width: 90%;
+        width: 85%;
         padding-left: 25px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -172,6 +210,23 @@
     }
     .detailBox table td i{
         padding-left:10px;
+    }
+
+    .detailBox table td button{
+        border: none;
+        background:#009688;
+        border: 1px solid #009688;
+        color: #fff;
+        margin-left: 20px;
+        padding: 2px 8px;
+        border-radius: 6px;
+    }
+    .detailBox table td button:hover{
+        background:#fff;
+        color: #009688;
+        transition: 0.2s;
+        border: 1px solid #009688;
+        cursor: pointer;
     }
 
     // .active-nav .content {
@@ -190,7 +245,6 @@
 
     @media screen and (min-width: 501px) and (max-width: 959px) {
         .fixed h3{
-            color: #1D4482;
             font-size: 1.2em;
             font-weight: bold;
             line-height: 3;
@@ -207,7 +261,9 @@
         }
         .fixed h4{
             font-size: 1em;
-            color: #8b4ab8;
+            color: #f98d78;
+        }
+        .fixed h4 span{
         }
         .fixed h4 span a{
             font-size: 0.6em;
@@ -218,7 +274,7 @@
             width: 85%;
         }
         .detailBox table tr{
-            height: 10px;
+            height: 20px;
         }
         .detailBox table th{
 
@@ -328,7 +384,6 @@
             margin: 0 auto;
         }
         .fixed h3{
-            color: #1D4482;
             font-size: 1.2em;
             font-weight: bold;
             line-height: 3;
@@ -348,7 +403,7 @@
         }
         .fixed h4{
             font-size: 1em;
-            color: #8b4ab8;
+            color: #f98d78;
             line-height: 1;
         }
         .fixed h4 span a{
@@ -360,7 +415,7 @@
             width: 100%;
         }
         .detailBox table tr{
-            height: 10px;
+            height: 20px;
         }
         .detailBox table th{
 
@@ -371,6 +426,9 @@
         }
         .detailBox table td i{
             padding-left:10px;
+        }
+        .detailBox table td button{
+            margin-left: 0px;
         }
         /*detail 공통 s*/
         .container {

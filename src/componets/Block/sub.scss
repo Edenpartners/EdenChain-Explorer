@@ -1,364 +1,402 @@
 .BlockFullList {
-   /*모든서브 공통*/
-   font-family: 'Roboto', sans-serif;
-   font-size: 18px;
-
-   background: #1d4482; /* Old browsers */
-   background: -moz-linear-gradient(left, #8b4ab8, #1d4482); /* FF3.6-15 */
-   background: -webkit-linear-gradient(left, #8b4ab8, #1d4482); /* Chrome10-25,Safari5.1-6 */
-   background: linear-gradient(to right, #8b4ab8, #1d4482); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b4ab8', endColorstr='#1d4482',GradientType=0 ); /* IE6-9 */
-   min-height: none;
-   height: fit-content;
+    /*모든서브 공통*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 
 
- #header {
-     position: fixed;
-     width: 100%;
-     z-index: 100;
- }
- 
- .header {
-     background: #fff;
-     display: grid;
-     grid-template-columns: 35% 30% 35%;
-     min-height: 80px;
-     border-bottom: none;
-     align-items: center;
- }
- 
- .logoDiv {
-     margin-left: 90px;
- }
- 
- .logoDiv h1 {}
- 
- .logoDiv h1 a {}
- 
- .logoDiv h1 a img {
-     width: 200px;
-     margin-top: 15px;
- }
- 
- .header .search {
-     height: 50px;
-     display: grid;
-     grid-template-columns: 8fr 2fr;
-     margin: 0 auto;
-     align-items: center;
- }
- .header .search label{
- 
- }
- .header .search a{
-     float: left;
-     font-size: 1.8em;
-     color: #fff;
-     font-weight: bold;
-     display: grid;
-     cursor: pointer;
- }
- 
- .header .search input {
-     border: 2px solid #fff;
-     background: transparent;
-     border-radius: 30px;
-     height: 35px;
-     font-size: 1em;
-     color: #fff;
-     width: 83%;
-     padding: 4px 20px;
- }
- 
- 
- .header .search button {
-     border: 2px solid #8b4ab8;
-     border-left: 0;
-     border-radius: 0 30px 30px 0;
-     font-size: 18px;
-     background: none;
-     color: #8b4ab8;
- }
- .header .search button:hover{
-     background: #8b4ab8;
-     color: #fff;
-     cursor: pointer;
-     transition: 0.2s;
- }
- 
- 
- .content {
-     transition: transform 0.4s ease;
-     height: 100%;
- 
- }
+    min-height: none;
+    height: fit-content;
 
- .container .content {
-     width: 95%;
-     margin: 0 auto;
- }
- .container .content h3{
-   font-weight: bold;
-   color: #fff;
-   line-height: 3;
-   font-size: 1.6em;
- }
- .container .content h3 i{
-   margin-right: 18px;
- }
- .container .content span{
-   font-weight: 200;
-   margin-left: 20px;
-   border-left: 1px solid #fff;
-   padding-left: 20px;
- }
- 
- .header.content {
-     height: 130px;
-     background: rgba(255,255,255,0.3);
- }
- // .active-nav .content {
- //     transform: translate3d(200px, 0, 0);
- // }
 
- ::-webkit-scrollbar {
-     width: 6px;
- } 
- ::-webkit-scrollbar-track {
-     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
- } 
- ::-webkit-scrollbar-thumb {
-     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
- }
- /*서브공통 끝*/
-  
+    #header {
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .header {
+        background: #fff;
+        display: grid;
+        grid-template-columns: 35% 30% 35%;
+        min-height: 80px;
+        border-bottom: 2px solid #111;
+        align-items: center;
+    }
+
+    .logoDiv {
+        margin-left: 90px;
+    }
+
+    .logoDiv h1 {}
+
+    .logoDiv h1 a {}
+
+    .logoDiv h1 a img {
+        width: 160px;
+        margin-top: 15px;
+    }
+
+    .HeaderMenu {
+        font-size: 16px;
+    }
+
+    .header .search {
+        height: 50px;
+        display: grid;
+        grid-template-columns: 8fr 2fr;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .header .search label {}
+
+    .header .search a {
+        float: left;
+        font-size: 1.8em;
+        color: #f98d78;
+        font-weight: bold;
+        display: grid;
+        cursor: pointer;
+    }
+
+    .header .search input {
+        border: 2px solid #f98d78;
+        border-radius: 30px;
+        height: 35px;
+        font-size: 1em;
+        color: #009688;
+        width: 83%;
+        padding: 4px 20px;
+    }
+
+
+    .header .search button {
+        border: 2px solid #f98d78;
+        border-left: 0;
+        border-radius: 0 30px 30px 0;
+        font-size: 18px;
+        background: none;
+        color: #f98d78;
+    }
+
+    .header .search button:hover {
+        background: #f98d78;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+
+    .content {
+        transition: transform 0.4s ease;
+        height: 100%;
+
+    }
+
+    .container {
+        font-size: 14px;
+        margin-bottom: 100px;
+    }
+
+    .container .content {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .container .content h3 {
+        font-weight: bold;
+        color: #333;
+        line-height: 3;
+        font-size: 1.6em;
+    }
+
+    .container .content h3 i {
+        margin-right: 18px;
+    }
+
+    .container .content span {
+        font-weight: 200;
+        margin-left: 20px;
+        border-left: 1px solid #333;
+        padding-left: 20px;
+    }
+
+    .header.content {
+        height: 130px;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    // .active-nav .content {
+    //     transform: translate3d(200px, 0, 0);
+    // }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /*서브공통 끝*/
+
 
     /*tbTit*/
-    .tables02{
+    .tables02 {
         width: 100%;
         height: 60vh;
         overflow: scroll;
-        padding:30px 0;
-        background: rgba(255,255,255,0.3);
+        padding: 30px 0;
+        background: #F7F7F7;
         overflow-y: scroll;
         overflow-x: hidden;
     }
-    .tbTit{
+
+    .tbTit {
         width: 95%;
         border-bottom: 1px solid #282828;
         display: table;
         margin: 0 auto;
         padding: 20px 20px 20px 0;
         font-size: 1.2em;
+        background: transparent;
     }
-    .tbTit:hover{
-        background: rgba(255, 255, 255, 0.5);
+
+    .tbTit:hover {
+        background: rgba(0, 0, 0, 0.1);
         transition: 0.2s;
     }
-    .tables01 .tbTit>ul{
+
+    .tables01 .tbTit>ul {
         width: 100%;
         float: left;
     }
-    .tbTit ul li{
+
+    .tbTit ul li {
         color: #333;
         float: left;
         word-break: word-break;
     }
-    .tbTit ul li:first-child{
-    }
-    .tbTit ul li:last-child{
+
+    .tbTit ul li:first-child {}
+
+    .tbTit ul li:last-child {
         word-break: break-all;
     }
-    .tbUl{
+
+    .tbUl {
         line-height: 2;
         padding-top: 0px;
         display: block;
         float: left;
     }
-    .tbTit ul .tit{
+
+    .tbTit ul .tit {
         font-weight: bold;
         padding: 0 20px;
         width: fit-content;
     }
 
-    .tbTit ul .tit01{
+    .tbTit ul .tit01 {}
 
-    }
-    .tbUl01{
+    .tbUl01 {
         width: 20%
     }
-    .sbox{
+
+    .sbox {
         width: 100%;
         display: table;
     }
-    .sbox ul{
-        
-    }
-    .tbUl02{
-        width: 40%;
-    }
-    .tbUl02 .tit{}
-    .tbUl02 .con01{}
-    .tbUl03{
+
+    .sbox ul {}
+
+    .tbUl02 {
         width: 40%;
     }
 
-    .tbUl03 .tit{
-        
+    .tbUl02 .tit {}
+
+    .tbUl02 .con01 {}
+
+    .tbUl03 {
+        width: 40%;
     }
-    .tbUl03 li:nth-child(even){
-        
-    }
-    .tbUl03 li:nth-child(even) i{
+
+    .tbUl03 .tit {}
+
+    .tbUl03 li:nth-child(even) {}
+
+    .tbUl03 li:nth-child(even) i {
         margin-left: 20px;
     }
-    .tbUl03{}
-    .tbUl03 .tit{
-        
-    }
-    .tbUl03 .con01{
 
-    }
-    .tbUl03 .con02{
+    .tbUl03 {}
+
+    .tbUl03 .tit {}
+
+    .tbUl03 .con01 {}
+
+    .tbUl03 .con02 {
         padding-left: 30px;
     }
-/**/
-    
-    
+
+    /**/
+
+
     /*media query*/
-    @media screen and (max-width: 1280px) {
-        
-    }
+    @media screen and (max-width: 1280px) {}
 
     @media screen and (max-width: 959px) {
 
         /*모든서브공통 s*/
-    .logoDiv h1 a img{
-        width: 150px;
-        margin-top: 20px;
-      }
-      .header .search input{
-        height: 30px;
-        width: 75%;
-      }
-  
-      .container{
-        width: 85%;
-        margin: 0 auto;
-        margin-top: 0px;
-        height: 100bh;
-    }
-    .container .content {
-        margin-left: 50px;
-        width: 95%;
-        margin: 0 auto;
-        margin-top: 0px;
-    }
-    .container .fixed{
-  
-    }
-    .container .fixed h3{
-        font-weight: bold;
-        color: #fff;
-        line-height: 3;
-        font-size: 1em;
-    }
-    .container .fixed span{
-        font-weight: 200;
-        margin-left: 20px;
-        border-left: 1px solid #fff;
-        padding-left: 20px;
-    }
-    .container .fixed h3 i{
-        margin-right: 10px;
-    }
-    .nav-toggle-btn .eden-align-justify{
-        color: #fff;
-    }
-    /*모든서브공통 e*/
+        .logoDiv h1 a img {
+            width: 150px;
+            margin-top: 20px;
+        }
+
+        .header .search input {
+            height: 30px;
+            width: 75%;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            margin-top: 0px;
+            height: 100vh;
+        }
+
+        .container .content {
+            margin-left: 50px;
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 0px;
+        }
+
+        .container .fixed {}
+
+        .container .fixed h3 {
+            font-weight: bold;
+            line-height: 3;
+            font-size: 1.2em;
+        }
+
+        .container .fixed span {
+            font-weight: 200;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+
+        .container .fixed h3 i {
+            margin-right: 10px;
+        }
+
+        .nav-toggle-btn .eden-align-justify {
+            color: #fff;
+        }
+
+        /*모든서브공통 e*/
 
 
+        .tables02 {
+            height: 70vh;
+        }
 
-
-        .tbTit{
+        .tbTit {
             font-size: 1em;
         }
-        
-        .tbTit ul li:last-child{
+
+        .tbTit ul li:last-child {
             padding: 0 20px;
         }
-        .tbUl{
+
+        .tbUl {
             line-height: 1.6;
         }
-        .tbUl03 li:nth-child(even) i{
+
+        .tbUl03 li:nth-child(even) i {
             margin-left: 10px;
         }
 
     }
+
     @media screen and (max-width: 500px) {
         /*모든서브공통 s*/
-    height: auto;
+        height: auto;
 
 
-    .header{
-      width: 100%;
-      display: block;
-    }
-    .header.content{
-      height: 130px;
-    }
-    
-    .logoDiv{
-      margin: 0 auto;
-    }
-    .logoDiv h1{
-      width: 120px;
-      margin: 0px auto;
-    }
-    .logoDiv h1 a img{
-      width: 120px;
-    }
-    .header .search{
-      width: 40%
-    }
-    .container{
-      padding-left: 0;
-      width: 95%;
-      height: 100vh;
-    }
-    .container .content{
-      width: 100%;
-    }
-    .container .fixed{
-    
-    }
-    .container .fixed span{
-      display: none;
-    }
-    .serBox{
-    
-    }
-    .header .search{
-      grid-template-columns: none;
-      width: 210px;
-      display: block;
-    }
-    .header .search label {
-      float: left;
-      height: 25px;
-    }
-    .header .search input{
-      height: 30px;
-      width: 150px;
-      padding: 4px 10px;
-    }
-    .header .search a{
-      width: fit-content;
-    justify-content: right;
-    float: right;
-    padding-top: 7px;
-    }
-
-          /*모든서브공통 e*/
+        .header {
+            width: 100%;
+            display: block;
         }
+
+        .header.content {
+            height: 130px;
+        }
+
+        .logoDiv {
+            margin: 0 auto;
+        }
+
+        .logoDiv h1 {
+            width: 120px;
+            margin: 0px auto;
+        }
+
+        .logoDiv h1 a img {
+            width: 120px;
+        }
+
+        .header .search {
+            width: 40%
+        }
+
+        .container {
+            padding-left: 0;
+            width: 95%;
+            height: 100vh;
+        }
+
+        .container .content {
+            width: 100%;
+        }
+
+        .container .fixed {}
+
+        .container .fixed span {
+            display: none;
+        }
+
+        .serBox {}
+
+        .header .search {
+            grid-template-columns: none;
+            width: 210px;
+            display: block;
+        }
+
+        .header .search label {
+            float: left;
+            height: 25px;
+        }
+
+        .header .search input {
+            height: 30px;
+            width: 150px;
+            padding: 4px 10px;
+        }
+
+        .header .search a {
+            width: fit-content;
+            justify-content: right;
+            float: right;
+            padding-top: 7px;
+        }
+
+        /*모든서브공통 e*/
     }
+}

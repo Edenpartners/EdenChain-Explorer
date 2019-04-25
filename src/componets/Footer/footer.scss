@@ -2,11 +2,10 @@
 .Footer {
     position: relative;
     bottom: 0;
-    margin-top: 100px;
 
     .footerCon{
-        background: #F2F7FC;
-        margin-left: 70px;
+        background: #F7F7F7;
+        margin-left: 50px;
         padding: 50px 50px 50px 0;
         height: auto;
         display: grid;
@@ -54,16 +53,16 @@
         padding-top: 40px;
     }
     .widget05 button{
-        border:2px solid rgba(139,74,184,0.75);
-        color: rgba(139,74,184,0.75);
+        border:2px solid rgba(0,150,136,1);
+        color: rgba(0,150,136,1);
         padding: 5px 10px;
         font-size: 0.8em;
         font-weight: 700;
         background: transparent;
     }
     .widget05 button:hover{
-        border:2px solid rgba(139,74,184,1);
-        color: rgba(139,74,184,1);
+        border:4px solid rgba(0,150,136,1);
+        color: rgba(0,150,136,1);
         cursor: pointer;
         transition: 0.2s;
     }
