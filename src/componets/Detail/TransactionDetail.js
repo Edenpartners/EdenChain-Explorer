@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import Footer from '../Footer/footer';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import styles from './sub_transaction.scss';
+
 
 class TransactionDetail extends Component {
     render(){
@@ -81,7 +83,8 @@ class TransactionDetail extends Component {
                     </div>
                 </div>
                </div>
-             </div>
+               <Footer></Footer>
+            </div>
 
 
         );

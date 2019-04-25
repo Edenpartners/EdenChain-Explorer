@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import Footer from '../SubFooter/footer';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import styles from './sub_transaction.scss';
+
 
 class TransactionFullList extends Component {
     render(){
@@ -42,12 +44,12 @@ class TransactionFullList extends Component {
                         <tbody>
                           <tr>
 
-                              <td width="10%"><a href="">1</a></td>
-                              <td width="10%"><a href="">ddd</a></td>
-                              <td width="20%" class="none"><a href="">67887768687</a></td>
-                              <td width="20%"><a href="">2017 17:40:60</a></td>
-                              <td width="20%"><a href="">38</a></td>
-                              <td width="20%"><a href="">55</a></td>
+                              <td width="10%"><a href="/txDtail">1</a></td>
+                              <td width="10%"><a href="/txDtail">ddd</a></td>
+                              <td width="20%" class="none"><a href="/txDtail">67887768687</a></td>
+                              <td width="20%"><a href="/txDtail">2017 17:40:60</a></td>
+                              <td width="20%"><a href="/txDtail">38</a></td>
+                              <td width="20%"><a href="/txDtail">55</a></td>
                        
                           </tr>
                         </tbody>
@@ -58,6 +60,9 @@ class TransactionFullList extends Component {
                 </div>
              </div>
             </div>
+            
+                <Footer></Footer>
+            
             </div>
 
         );

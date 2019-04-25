@@ -3,15 +3,18 @@ import TxDayChart from '../Charts/TxDayChart';
 import TxHourChart from '../Charts/TxHourChart';
 import BlockDayChart from '../Charts/BlockDayChart';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
-import Footer from '../Footer/footer.js';
+import Footer from '../Footer/footer';
 import BlockHeightBox from '../Box/BlockHeightBox';
 import TotalTransactionBox from '../Box/TotalTransactionBox';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styles from './flex_index.scss';
 
+import { Pagination } from 'semantic-ui-react'
+
 
 class MainFront extends Component {
     render(){
+        
         return (
         <div className="MainFront wrapper">
 
@@ -198,23 +201,6 @@ class MainFront extends Component {
                                                 </td>
                                             </tr>
 
-                                            <tr>
-                                                <td className="blockId"><a href="/blocklist">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
-                                                </td>
-    
-                                                <td><a href="/blocklist">
-                                                    <span>666</span></a>
-                                                </td>
-    
-                                                <td><a href="/blocklist">
-                                                    <span>888</span></a>
-                                                </td>
-    
-                                                <td className="downInfo" title="Downloard" >
-                                                    <a href=""><i className="eden-file"></i></a>
-                                                </td>
-                                            </tr>
 
                                             
     
@@ -339,39 +325,7 @@ class MainFront extends Component {
                                                     <a href=""><i className="eden-file"></i></a>
                                                 </td>
                                             </tr>
-    
-
-                                            <tr>
-                                                <td className="blockId"><a href="./txlist">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
-                                                </td>
-    
-                                                <td><a href="./txlist">
-                                                    <span>666</span></a>
-                                                </td>
-    
-                                                <td className="downInfo" title="Downloard">
-                                                    <a href=""><i className="eden-file"></i></a>
-                                                </td>
-                                            </tr>
-    
-
-                                            <tr>
-                                                <td className="blockId"><a href="./txlist">
-                                                    <span>sfwefwefwefwefwefwfwefwfwefwef</span></a>
-                                                </td>
-    
-                                                <td><a href="./txlist">
-                                                    <span>666</span></a>
-                                                </td>
-    
-                                                <td className="downInfo" title="Downloard">
-                                                    <a href=""><i className="eden-file"></i></a>
-                                                </td>
-                                            </tr>
-    
-    
-                                            
+                                           
     
                                         </tbody>
     
@@ -389,10 +343,8 @@ class MainFront extends Component {
                 </div>
     
     
-                <script type="text/javascript" src="js/chart.js"></script>
     
             </div>
-    
             <Footer></Footer>
         </div>
 

@@ -18,10 +18,14 @@ class BlockHeightBox extends Component{
     }
 
     componentWillUnmount(){
-        if(this._requests)
+        this._requests = this.apis.getBlockHeight().then((data)=>
         {
-            this._requests.cancel();
+            if(this._requests)
+            {
+                this._requests.cancel();
+            }
         }
+        );
     }
 
     render(){      
