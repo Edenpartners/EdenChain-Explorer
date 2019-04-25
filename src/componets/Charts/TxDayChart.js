@@ -10,15 +10,15 @@ class TxDayChart extends Component{
                 datasets: [{
                     data: [0,12, 19, 3, 5, 2, 3,12],
                     backgroundColor: [
-                        'rgba(139, 74, 184, 0.2)',
+                        'rgba(249, 141, 101, 0.2)',
                     ],
                     label: '7 days Transaction',
                     pointBackgroundColor:'rgba(0, 0, 0, 0.1)',
                     pointHoverBackgroundColor:'',
-                    pointBorderColor:'rgba(9, 35, 71, 0.5)',
+                    pointBorderColor:'rgba(25, 78, 79, 0.5)',
                     pointBorderWidth:2,
                     pointHoverBorderWidth:4,
-                    pointHoverBorderColor:'rgba(9, 35, 71, 1)',
+                    pointHoverBorderColor:'rgba(25, 78, 79, 1)',
                     borderWidth: 1
                 }]
             };
@@ -35,9 +35,9 @@ class TxDayChart extends Component{
                 title: {
                     display: true,
                     text: '7 days Transaction',
-                    fontSize:18,
+                    fontSize:14,
                     fontFamily:"'Hind',sans-serif",
-                    fontColor: '#1D4482',
+                    fontColor: 'rgba(25, 78, 79, 1)',
                     fontStyle:'bold',
                     padding:10,
                     lineHeight:1.8,

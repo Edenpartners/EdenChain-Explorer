@@ -42,33 +42,33 @@
     .header .search a{
         float: left;
         font-size: 1.8em;
-        color: #8b4ab8;
+        color: #f98d78;
         font-weight: bold;
         display: grid;
         cursor: pointer;
     }
     
     .header .search input {
-        border: 2px solid #8b4ab8;
+        border: 2px solid #f98d78;
         border-radius: 30px;
         height: 35px;
         font-size: 1em;
-        color: #1d4482;
+        color: #009688;
         width: 83%;
         padding: 4px 20px;
     }
     
     
     .header .search button {
-        border: 2px solid #8b4ab8;
+        border: 2px solid #f98d78;
         border-left: 0;
         border-radius: 0 30px 30px 0;
         font-size: 18px;
         background: none;
-        color: #8b4ab8;
+        color: #f98d78;
     }
     .header .search button:hover{
-        background: #8b4ab8;
+        background: #f98d78;
         color: #fff;
         cursor: pointer;
         transition: 0.2s;
@@ -108,7 +108,7 @@
     color: var(--primary);
 }
 .mainCon h3{
-    color: #1D4482;
+    color: #009688;
     
 }
 .mainCon h4 i{
@@ -137,7 +137,7 @@
     display: flex;
     align-items: center;
     padding-left: 30px;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: bold;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .dashCon.summary .cont {
-    background: #F2F7FC;
+    background: #fcf8f7;
     display: grid;
     align-items: center;
     padding: 0 20px;
@@ -228,7 +228,7 @@
 .mainCon01 .summary .cont h5{
     margin: 0 0 10px;
     padding: 0;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 500;
     color: #282828;
     z-index: 0;
@@ -236,7 +236,7 @@
 .mainCon01 .summary .cont p{
     margin: 0;
     padding: 0;
-    color: #1D4482;
+    color: #194e4f;
     font-size:4em;
     font-weight: 700;
     z-index: 0;
@@ -256,7 +256,7 @@
     text-decoration: none;
     display: inline-block;
     color: #333;
-    border: 1px solid #8b4ab8;
+    border: 1px solid #f98d78;
     width: fit-content;
     border-radius: 25px;
     transition: 0.5s;
@@ -270,12 +270,7 @@
 
 .mainCon01 .summary .cont a:hover{
     color: #fff;
-    background: #1d4482; /* Old browsers */
-    background: #1d4482; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #9AC4E9 2%, #D5B4EF 100%); 
-    background: -webkit-linear-gradient(-45deg, #9AC4E9 2%,#D5B4EF 100%);
-    background: linear-gradient(135deg, #9AC4E9 2%,#D5B4EF 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9AC4E9', endColorstr='#D5B4EF',GradientType=1 ); 
+    background: #fcb3a9;
     transition: 0.2s;
     cursor: pointer;
     border: none;
@@ -300,34 +295,34 @@
 .dashCon.summary .cont01{
 }
 .mainCon01 .dashCon.summary .cont01{
-    background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat 120% -65%;
+    background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat 120% -65%;
     background-size: 40%;
     transition: 0.5s;
 }
 .mainCon01 .dashCon.summary .cont01:hover{
-    background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat 110% 0%;
+    background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat 110% 0%;
     background-size: 35%;
     transition: 0.5s;
 }
 
 .mainCon01 .dashCon.summary .cont02{
-    background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat 120% -65%;
+    background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat 120% -65%;
     background-size: 40%;
     transition: 0.5s;
 }
 .mainCon01 .dashCon.summary .cont02:hover{
-    background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat 105% 0%;
+    background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat 105% 0%;
     background-size: 35%;
     transition: 0.5s;
 }
 
 .mainCon01 .dashCon.summary .cont03{
-    background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat 120% -65%;
+    background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat 120% -65%;
     background-size: 40%;
     transition: 0.5s;
 }
 .mainCon01 .dashCon.summary .cont03:hover{
-    background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat 110% 0%;
+    background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat 110% 0%;
     background-size: 35%;
     transition: 0.5s;
 }
@@ -353,8 +348,9 @@
 
 .mainContent02 .mainCon {
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: auto 95%;;
     margin-bottom: 100px;
+    line-height: 2;
 }
 
 .mainContent02 .mainCon .h3 {
@@ -364,7 +360,7 @@
 
 .mainContent02 .mainCon h3 {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
 }
 
 .titR {
@@ -374,7 +370,7 @@
     margin-right:30px;
 }
 .titR button{
-    border: 1px solid #1D4482;
+    border: 1px solid #009688;
     background: none;
     line-height: 1.6;
     padding: 4px 20px 4px 20px;
@@ -397,7 +393,7 @@
     display: flex;
     padding-left: 30px;
     align-items: center;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: bold;
 }
 
@@ -453,8 +449,8 @@
     padding: 14px 10px;
     font-size: 1.2em;
     line-height: 1.6;
-    border-bottom: 3px solid #575a65;
-    background: #F2F7FC;
+    border-bottom: 2px solid #b2b2b2;
+    background: #fcf8f7;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -481,7 +477,7 @@
     border-right: none;
 }
 .tables01 table tr:hover td{
-    background: rgba(107,110,206,0.8);
+    background: rgba(0,150,136,0.4);
     color: #fff;
     transition: 0.3s;
     cursor: pointer;
@@ -537,7 +533,7 @@
 .tables01 table{
 }
 .tables01 table .odd,.tables01 table .odd tr{
-    background: #F2F7FC;
+    background: #fcf8f7;
     width: 100%;
 }
 
@@ -596,34 +592,34 @@
 @media screen and (max-width: 1400px) {
     
     .mainCon01 .dashCon.summary .cont01{
-        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat 120%  -10%;
-        background-size: 30%;
+        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat 120%  -10%;
+        background-size: 40%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont01:hover{
-        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat 120%  20%;
+        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat 120%  20%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont02{
-        background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat 120%  -10%;
+        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat 120%  -10%;
         background-size: 40%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont02:hover{
-        background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat 120%  20%;
+        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat 120%  20%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont03{
-        background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat 120%  -10%;
+        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat 120%  -10%;
         background-size: 40%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont03:hover{
-        background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat 110% 0%;
+        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat 110% 0%;
         background-size: 40%;
         transition: 0.5s;
     }
@@ -672,6 +668,9 @@
         padding-left: 0px;
         height: 60px;      
     }
+    .mainCon01 .summary .cont{
+        height: 150px;
+    }
     .mainCon01 .summary .cont p{
         font-size: 2em;
     }
@@ -709,34 +708,34 @@
     }
 
     .mainCon01 .dashCon.summary .cont01{
-        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -10% -25%;
+        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat -10% -25%;
         background-size: 35%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont01:hover{
-        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -10% -25%;
+        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat -10% -25%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont02{
-        background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat -10% -25%;
+        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat -10% -25%;
         background-size: 35%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont02:hover{
-        background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat -10% -25%;
+        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat -10% -25%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont03{
-        background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat -5% -20%;
+        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat -5% -20%;
         background-size: 32%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont03:hover{
-        background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat -5% -20%;
+        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat -5% -20%;
         background-size: 37%;
         transition: 0.5s;
     }
@@ -892,6 +891,11 @@
     .mainCon01 .summary .cont p{
         font-size: 1.4em;
     }
+    .mainCon01 .summary .cont{
+        position: relative;
+        overflow: hidden;
+        height: 100px;
+    }
     .dashCon.summary{
         margin-left: 0px;
         padding: 0;
@@ -974,34 +978,34 @@
 
 
     .mainCon01 .dashCon.summary .cont01{
-        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -5% -50%;
+        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat -5% -50%;
         background-size: 30%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont01:hover{
-        background: url('/images/baseline-blur02.svg') #F2F7FC no-repeat -5% -50%;
+        background: url('/images/baseline-blur03.svg') #fcf8f7 no-repeat -5% -50%;
         background-size: 40%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont02{
-        background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat -10% -25%;
+        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat -10% -25%;
         background-size: 35%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont02:hover{
-        background: url('/images/baseline-graphic02.svg') #F2F7FC no-repeat -10% -25%;
+        background: url('/images/baseline-graphic03.svg') #fcf8f7 no-repeat -10% -25%;
         background-size: 35%;
         transition: 0.5s;
     }
     
     .mainCon01 .dashCon.summary .cont03{
-        background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat -5% -20%;
+        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat -5% -20%;
         background-size: 32%;
         transition: 0.5s;
     }
     .mainCon01 .dashCon.summary .cont03:hover{
-        background: url('/images/baseline-restore02.svg') #F2F7FC no-repeat -5% -20%;
+        background: url('/images/baseline-restore03.svg') #fcf8f7 no-repeat -5% -20%;
         background-size: 32%;
         transition: 0.5s;
     }

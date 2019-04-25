@@ -74,7 +74,7 @@ nav {
     z-index: 1000;
     top: 0;
     bottom: 0;
-    background-color: #1D4482;
+    background-color: #f98d78;
     transform: translate3d(-200px, 0, 0);
     transition: transform 0.4s ease;
     width: 270px;
@@ -86,12 +86,12 @@ nav {
     left: 0px;
     width: 270px;
     height: 130px;
-    background-color: #1D4482;
+    background-color: #f98d78;
     cursor: pointer;
 }
 
 .nav-toggle-btn:hover {
-    background: #092347;
+    background: #ef7e6f;
     transition: 0.5s;
 }
 
@@ -114,11 +114,7 @@ nav .navCon {
     left: 0px;
     width: 270px;
     height: 100%;
-    background: #1d4482; /* Old browsers */
-    background: -moz-linear-gradient(top, #1d4482 1%, #8b4ab8 64%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #1d4482 1%,#8b4ab8 64%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #1d4482 1%,#8b4ab8 64%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d4482', endColorstr='#8b4ab8',GradientType=0 ); /* IE6-9 */
+    background: #f98d78; /* Old browsers */
 }
 
 nav .menu {
@@ -137,7 +133,7 @@ nav .menu li a {
 }
 
 .menu_tit:hover {
-    background: #092347;
+    background: #ef7e6f;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -190,7 +186,7 @@ nav .menu li a {
 
     .active-nav .nav-toggle-btn {
         width: 200px;
-        background:#1d4482;
+        background:#009688;
     }
     .active-nav nav .navCon{
         width: 200px;
@@ -221,7 +217,7 @@ nav .menu li a {
 
     .active-nav .nav-toggle-btn {
         width: 130px;
-        background:#1d4482;
+        background:#009688;
     }
 
     nav .navCon {
