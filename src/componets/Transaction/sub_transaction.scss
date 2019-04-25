@@ -353,8 +353,11 @@
     padding-top: 7px;
     }
     .nav-toggle-btn .eden-align-justify{
-      color: #fff;
+      color: #333;
     }
+    .active-nav .nav-toggle-btn .eden-align-justify {
+      color: #fff;
+  }
     /*모든서브공통 e*/
 
     .tbl-content table{
