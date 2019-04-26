@@ -125,7 +125,7 @@ class TransactionFullList extends Component {
                 <li><a href="#" className="none">8</a></li>
                 <li><a href="#" className="none">9</a></li>
                 <li><a href="#" className="none">10</a></li>
-                <li><a href="#" id="next"><i className="eden-chevrons-right"></i></a></li>
+                <li><a id="next"><i className="eden-chevrons-right"></i></a></li>
               </ul>
             </div>
 
