@@ -1,14 +1,27 @@
 import React, {Component} from 'react';
 import {Line} from 'react-chartjs-2';
-
+import apis from '../../api/api';
 
 class TxDayChart extends Component{
     constructor(){
         super();
+        this.apis = new apis();
+
+        // Create X-Axis
+        this.labels=[]
+        let today = new Date();
+        today.setDate(today.getDate()-7);
+        for(let i=0;i<7;i++)
+        {            
+            today.setDate(today.getDate()+1);
+            this.labels.push(new String(today.getUTCDate()));
+        }
+
+
         this.chartData = {           
-                labels: ['','01', '02', '03', '04', '05','06','07'],
+                labels:  this.labels,
                 datasets: [{
-                    data: [0,12, 19, 3, 5, 2, 3,12],
+                    data: [0,0,0,0,0,0,0],
                     backgroundColor: [
                         'rgba(249, 141, 101, 0.2)',
                     ],
@@ -34,7 +47,7 @@ class TxDayChart extends Component{
                 },
                 title: {
                     display: true,
-                    text: '7 days Transaction',
+                    text: '7 days Transactions',
                     fontSize:14,
                     fontFamily:"'Hind',sans-serif",
                     fontColor: 'rgba(25, 78, 79, 1)',
@@ -53,12 +66,39 @@ class TxDayChart extends Component{
                     }
                 }
             };
+
+            this.state = {chartData: this.chartData, chartOptions: this.cartOptions};
+    }
+
+    componentWillMount() {
+        this._requests = this.apis.getTimeSeriesTransactions('day').then((data)=>
+        {
+            this._requests = null;
+
+            let cdata = this.state.chartData;
+           
+            
+            for (let i=0;i<this.labels.length;i++){
+                for (let j = 0;j<data.length;j++){                        
+                        if(data[j].hasOwnProperty(this.labels[i]))
+                        {                           
+                            cdata.datasets[0].data[i] = data[j][this.labels[i]]
+                        }
+                }                
+            }
+                  
+            this.setState({chartData:cdata});
+        }
+        );
+    }
+
+    componentWillUnmount(){   
     }
 
     render(){
         return (
             <div className="cont cont01 chart">
-                <Line id="first_chart" data={this.chartData} options={this.chartOptions} />
+                <Line id="first_chart" data={this.state.chartData} options={this.state.chartOptions} />
             </div>
         );
     }

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from "react-router-dom";
 import apis from '../../api/api';
 
 class TotalTransactionBox extends Component{
@@ -18,14 +19,8 @@ class TotalTransactionBox extends Component{
     }
 
     componentWillUnmount(){
-        this._requests = this.apis.getBlockHeight().then((data)=>
-        {
-            if(this._requests)
-            {
-                this._requests.cancel();
-            }
-        }
-        );
+
+            
     }
 
     render(){      
@@ -33,7 +28,7 @@ class TotalTransactionBox extends Component{
             <div className="cont cont02">
                 <h5>Total Transactions</h5>
                 <p>{this.state.count}</p>
-            <div className="more"><a href="">Read More</a></div>
+            <div className="more"><Link to="/txlist">Read More</Link></div>
         </div>
         );
     }

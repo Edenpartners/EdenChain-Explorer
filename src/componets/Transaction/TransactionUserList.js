@@ -5,21 +5,26 @@ import  './sub_transaction.scss';
 import apis from '../../api/api';
 import { Link } from "react-router-dom";
 
-class TransactionFullList extends Component {
+class TransactionUserList extends Component {
     constructor(){
       super();
       this.apis = new apis();
       this.state = {data:undefined,page:1, countperpage:14};
+    
+      
     }
 
     componentWillMount() {
-      // Get Last page, 6 items.
-      this._requests = this.apis.getTransactionList(this.state.page,this.state.countperpage).then((data)=>
-      {                
-          this.setState({data:data});
-          this._requests = null;   
-      }
-      );
+        const { match: { params } } = this.props;
+        this.params = params;
+        this._requests = this.apis.searchKeyword(this.params.keyword, this.state.page,this.state.countperpage).then((data)=>
+        {   
+            console.log(data);             
+            this.setState({data:data});
+            this._requests = null;   
+            
+        }
+        );
   }
 
   componentWillUnmount(){
@@ -32,7 +37,7 @@ class TransactionFullList extends Component {
 
           if(this.state.data)
           {
-              for(let [index,d] of this.state.data.transactions.entries())
+              for(let [index,d] of this.state.data.data.transactions.entries())
               {
                   let date = new Date(d.timestamp*1000);
                   let link = "/txDetail/"+d.id;
@@ -108,4 +113,4 @@ class TransactionFullList extends Component {
     }
 };
 
-export default TransactionFullList;
+export default TransactionUserList;
