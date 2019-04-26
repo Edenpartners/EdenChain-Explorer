@@ -12,6 +12,7 @@ class TransactionFullList extends Component {
   
   render() {
 
+     //pagination 스크립트 s
     $('ul.pagination').on('click', 'a', function() { // listen for click on pagination link
       if($(this).hasClass('active')) return false;
     
@@ -56,6 +57,7 @@ class TransactionFullList extends Component {
       active_elm.removeClass('active');
     
     });
+     //pagination 스크립트 e
 
 
     return (
