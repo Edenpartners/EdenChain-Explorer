@@ -1,17 +1,28 @@
 import React, {Component} from 'react';
 import {Bar} from 'react-chartjs-2';
-
+import apis from '../../api/api';
 
 class TxHourChart extends Component{
     constructor(){
         super();
+        this.apis = new apis();
+
+
+        // Create X-Axis
+        this.labels=[]
+        let today = new Date();
+        today.setDate(today.getDate()-1);
+        for(let i=0;i<=23;i++)
+        {            
+            today.setTime(today.getTime()+ (60*60*1000));
+            this.labels.push(new String(today.getUTCHours()));
+        }
+
         this.chartData = {           
-            labels: ['00', '01', '02', '03', '04', '05','06','07','08','09',
-            '10','11','12','13','14','15','16','17','18','19','20','21','22',
-            '23','24'],
+            labels: this.labels,
             datasets: [{
                 label: '24 hours Transaction',
-                data: [12, 19, 3, 5, 2, 3,12,6,3,5,18,5,8,9,2,4,6,2,8,7,3,6,7,4],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],                    
                 backgroundColor: [
                     'rgba(249, 141, 101, 0.2)',
                     'rgba(0,150,136,0.2)',
@@ -79,7 +90,7 @@ class TxHourChart extends Component{
             },
             title: {
                 display: true,
-                text: '24 hours Transaction',
+                text: '24 hours transactions',
                 fontSize:14,
                 fontFamily:"'Hind',sans-serif",
                 fontColor: 'rgba(25, 78, 79, 1)',
@@ -97,10 +108,37 @@ class TxHourChart extends Component{
                 }
             }
             };
+
+            this.state = {chartData: this.chartData, chartOptions: this.cartOptions};
+    }
+
+    componentWillMount() {
+        this._requests = this.apis.getTimeSeriesTransactions('hour').then((data)=>
+        {
+            this._requests = null;
+
+            let cdata = this.state.chartData;
+           
+            
+            for (let i=0;i<this.labels.length;i++){
+                for (let j = 0;j<data.length;j++){                        
+                        if(data[j].hasOwnProperty(this.labels[i]))
+                        {                           
+                            cdata.datasets[0].data[i] = data[j][this.labels[i]]
+                        }
+                }                
+            }
+                  
+            this.setState({chartData:cdata});
+        }
+        );
+    }
+
+    componentWillUnmount(){
     }
 
     render(){
-        return <div className="cont cont02 chart"><Bar id="second_chart" data={this.chartData} options={this.chartOptions} /></div>
+        return <div className="cont cont02 chart"><Bar id="second_chart" data={this.state.chartData} options={this.state.chartOptions} /></div>
     }
 }
 

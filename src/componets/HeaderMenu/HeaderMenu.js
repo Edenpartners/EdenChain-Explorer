@@ -7,11 +7,32 @@ class HeaderMenu extends Component{
     constructor(){
         super();
         this.state = {showHeader:false};
+        
     }
 
     handleClick(e){
         this.setState({showHeader: !this.state.showHeader});
         e.preventDefault();
+    }
+
+    handleSearch = () => {
+        let search = this.searchTerm.value.trim();
+
+        if (search.match(/^\d+$/)){
+            let link = '/blockDetail/'+search;
+            window.location = link;
+            
+        }
+        else if (search.length==64){
+            let link = '/txDetail/'+search;
+            window.location = link;
+            
+        }
+        else if (search.length==44){
+            let link = '/txUserList/'+search;
+            window.location = link;
+        }
+        
     }
 
     render(){
@@ -57,15 +78,15 @@ class HeaderMenu extends Component{
                 <div className="header fixed content">
 
                     <div className="logoDiv">
-                        <h1><a href=""><img src="../images/e-explorer01.png" alt="logo"/></a></h1>
+                        <h1><Link to="/"><img src="/images/e-explorer01.png" alt="logo"/></Link></h1>
                     </div>
 
                     <div className="serBox">
                         <div className="search">
-                            <label for="">
-                                <input type="text" className="searchTerm" placeholder=""/>
+                            <label >
+                                <input type="text" className="searchTerm" placeholder="" ref={ el => this.searchTerm = el}/>
                             </label>
-                            <a className="searchButton">
+                            <a className="searchButton" onClick={this.handleSearch} >
                                 <i className="eden-search"></i>
                             </a>
                         </div>
