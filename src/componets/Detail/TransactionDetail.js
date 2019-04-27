@@ -101,7 +101,7 @@ class TransactionDetail extends Component {
                                 <tr>
                                     <th>From ADDR</th>
                                     <td>
-                                        <span className="">{data.before_owner}</span>
+                                        <span className=""><Link to={"/txUserList/"+data.before_owner}>{data.before_owner}</Link></span>
                                         <span className=""></span>
                                     </td>
                                 </tr>
@@ -110,7 +110,7 @@ class TransactionDetail extends Component {
                                 <tr>
                                     <th>To ADDR</th>
                                     <td>
-                                        <span className="">{data.request_transaction_amount.length>0 && data.request_transaction_amount[0].address}</span>
+                                        <span className=""><Link to={data.request_transaction_amount.length>0 && "/txUserList/"+data.request_transaction_amount[0].address}>{data.request_transaction_amount.length>0 && data.request_transaction_amount[0].address}</Link></span>
                                         <span className=""></span>
                                     </td>
                                 </tr>

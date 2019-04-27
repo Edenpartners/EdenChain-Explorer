@@ -20,7 +20,7 @@ class LastInfoBox extends Component{
         {
             this._requests2 = null;
             this.setState({date:
-                data.getFullYear() + "-" + (data.getMonth() + 1) + "-" + data.getDate() + " " + data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds() 
+                data.getUTCFullYear() + "-" + (data.getUTCMonth() + 1) + "-" + data.getUTCDate() + " " + data.getUTCHours() + ":" + data.getMinutes() + ":" + data.getSeconds() 
             })
         }
         );
