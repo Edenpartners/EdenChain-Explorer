@@ -13,10 +13,6 @@ import BlockLastList from '../Block/BlockLastList';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './flex_index.scss';
 
-import { Pagination } from 'semantic-ui-react'
-
-import { Pagination } from 'semantic-ui-react'
-
 
 class MainFront extends Component {
     render(){

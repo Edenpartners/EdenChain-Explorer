@@ -31,7 +31,8 @@ class Footer extends Component{
                             <ul>
                                 <li><a href="https://www.edenchain.io/who-we-are/about-us/">About Us</a></li>
                                 <li><a href="https://www.edenchain.io/who-we-are/people/">People</a></li>
-                                <li><a href="">Partners/Investors</a></li>
+                                <li><a href="https://www.edenchain.io/who-we-are/partners-investors/">Partners/Investors</a></li>
+                                <li><a href="">Terms of Servicw</a></li>
                             </ul>
                         </div>
                     </div>
@@ -40,10 +41,10 @@ class Footer extends Component{
                         <h4>WHAT WE DO</h4>
                         <div className="fMenu">
                             <ul>
-                                <li><a href="">Vision</a></li>
-                                <li><a href="">Edenchain Platform</a></li>
-                                <li><a href="">Garden of Eden</a></li>
-                                <li><a href="">HelloEden</a></li>
+                                <li><a href="https://www.edenchain.io/what-we-do/vision/">Vision</a></li>
+                                <li><a href="https://www.edenchain.io/what-we-do/edenchain-platform/">Edenchain Platform</a></li>
+                                <li><a href="https://www.edenchain.io/what-we-do/garden-of-eden/">Garden of Eden</a></li>
+                                <li><a href="https://www.edenchain.io/what-we-do/helloeden/">HelloEden</a></li>
                             </ul>
                         </div>
                     </div>
@@ -57,9 +58,9 @@ class Footer extends Component{
                         <h4>HOW WE DO</h4>
                         <div className="fMenu">
                             <ul>
-                                <li><a href="">Our approach</a></li>
-                                <li><a href="">Go-To-Market</a></li>
-                                <li><a href="">Roadmap</a></li>
+                                <li><a href="https://www.edenchain.io/how-we-do/our-approach/">Our approach</a></li>
+                                <li><a href="https://www.edenchain.io/how-we-do/go-to-market/">Go-To-Market</a></li>
+                                <li><a href="https://www.edenchain.io/how-we-do/roadmap/">Roadmap</a></li>
                             </ul>
                         </div>
                     </div>
@@ -68,8 +69,8 @@ class Footer extends Component{
                         <h4>CONTACT</h4>
                         <div className="fMenu">
                             <ul>
-                                <li><a href="">Contact Us</a></li>
-                                <li><a href="">Career</a></li>
+                                <li><a href="https://www.edenchain.io/contact-us/">Contact Us</a></li>
+                                <li><a href="https://www.edenchain.io/edenpartners-job-opening/">Career</a></li>
                             </ul>
                         </div>
                     </div>
@@ -84,7 +85,7 @@ class Footer extends Component{
                         <p>
                         If you want to subscribe to our monthly newsletter, please submit the form below.  
                         </p>
-                        <button>APPLY <i className="eden-arrow-right"></i></button>
+                        <button onclick="location.href='https://www.edenchain.io/newsletter/'">APPLY <i className="eden-arrow-right"></i></button>
                     </div>
 
                 </div>
