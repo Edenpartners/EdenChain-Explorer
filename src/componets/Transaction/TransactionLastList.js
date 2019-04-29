@@ -25,7 +25,17 @@ class TransactionLastList extends Component{
 
     }
 
-    
+    ellipseString(data){
+        if(data)
+        {
+            if(data.length>30)
+                return data.substring(0,30)+"...";
+            else
+                return data;
+        }
+        else
+            return data;
+    }
 
     render(){     
 
@@ -40,7 +50,7 @@ class TransactionLastList extends Component{
                 data_list.push( (
                         <tr key={index}>
                             <td className="blockId"><Link to={link}>
-                                <span>{d.id} </span></Link>
+                                <span>{this.ellipseString(d.id)} </span></Link>
                             </td>
 
                             <td><Link to={link}>
