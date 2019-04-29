@@ -1,0 +1,17 @@
+.TransactionDetail{
+    .detailBox.termBox{
+        width: 80%;
+        word-break: break-word;
+    }
+    .termBox p{
+        line-height: 1.8;
+        padding: 8px 0;
+    }
+
+
+    @media screen and (max-width: 500px) {
+        .detailBox.termBox{
+            width: 90%;
+        }
+    }
+}
