@@ -85,7 +85,7 @@ class Footer extends Component{
                         <p>
                         If you want to subscribe to our monthly newsletter, please submit the form below.  
                         </p>
-                        <button onclick="location.href='https://www.edenchain.io/newsletter/'">APPLY <i className="eden-arrow-right"></i></button>
+                        <input type="button" onclick="location.href='https://www.edenchain.io/newsletter/'">APPLY <i className="eden-arrow-right"></i></input>
                     </div>
 
                 </div>
