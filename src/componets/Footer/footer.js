@@ -32,7 +32,7 @@ class Footer extends Component{
                                 <li><a href="https://www.edenchain.io/who-we-are/about-us/">About Us</a></li>
                                 <li><a href="https://www.edenchain.io/who-we-are/people/">People</a></li>
                                 <li><a href="https://www.edenchain.io/who-we-are/partners-investors/">Partners/Investors</a></li>
-                                <li><a href="/tos">Terms of Servicw</a></li>
+                                <li><a href="/tos">Terms of Service</a></li>
                             </ul>
                         </div>
                     </div>

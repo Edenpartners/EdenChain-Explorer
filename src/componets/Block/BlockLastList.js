@@ -24,6 +24,19 @@ class BlockLastList extends Component{
  
     }
 
+    ellipseString(data){
+        if(data)
+        {
+            if(data.length>24)
+                return data.substring(0,24)+"...";
+            else
+                return data;
+        }
+        else
+            return data;
+    }
+
+
     render(){
 
         let data_list = [];
@@ -46,11 +59,11 @@ class BlockLastList extends Component{
                                         (()=>{
                                             if (d.transactions.length>1)
                                             {
-                                                return(<span>{d.transactions[0]}...</span>);
+                                                return(<span>{this.ellipseString(d.transactions[0])} [{d.transactions.length}]</span>);
                                             }
                                             else
                                             {
-                                                return(<span>{d.transactions[0]}</span>);
+                                                return(<span>{this.ellipseString(d.transactions[0])}</span>);
                                             }
                                             
                                         }
@@ -60,7 +73,7 @@ class BlockLastList extends Component{
                             </td>
 
                             <td><Link to={link}>
-                                <span>{d.hash}</span></Link>
+                                <span>{this.ellipseString(d.hash)}</span></Link>
                             </td>
 
                     </tr>
@@ -88,15 +101,15 @@ class BlockLastList extends Component{
 
                     <tbody>
                         <tr className="col">
-                            <th width="40%">
-                                <span>Block Number</span>
+                            <th width="10%">
+                                <span>Height</span>
                             </th>
 
-                            <th width="30%">
+                            <th width="45%">
                                 <span>Transaction NO</span>
                             </th>
 
-                            <th width="20%">
+                            <th width="45%">
                                 <span>Block Hash</span>
                             </th>
                         </tr>
