@@ -16,7 +16,7 @@ class Footer extends Component{
                                 alt="edenchain" />
                         </p>
                         <p className="widget_txt">
-                            Edenchain is a blockchain technology designed specifically with enterprises in mind. It is
+                            EdenChain is a blockchain technology designed specifically with enterprises in mind. It is
                             fast, secure and reliable third generation blockchain platform
                         </p>
                         <p>green@edenchain.io</p>
@@ -32,7 +32,7 @@ class Footer extends Component{
                                 <li><a href="https://www.edenchain.io/who-we-are/about-us/">About Us</a></li>
                                 <li><a href="https://www.edenchain.io/who-we-are/people/">People</a></li>
                                 <li><a href="https://www.edenchain.io/who-we-are/partners-investors/">Partners/Investors</a></li>
-                                <li><a href="/tos">Terms of Service</a></li>
+                                <li><Link to="/tos">Terms of Service</Link></li>
                             </ul>
                         </div>
                     </div>

@@ -23,6 +23,20 @@ class TransactionUserList extends Component {
 
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+    
+
+    componentDidUpdate(prevProps) {                
+        if (this.props.match.params.keyword !== prevProps.match.params.keyword) {
+           this.state.page = 1;
+           this.state.skippage = 0;
+           this.params = this.props.match.params;
+           this.queryPage();
+        }
+      }
+
     queryPage() {
       this._requests = this.apis.searchKeyword(this.params.keyword, this.state.page,this.state.countperpage).then((data)=>
         {   

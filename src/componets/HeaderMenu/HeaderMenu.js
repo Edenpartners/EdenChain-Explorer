@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link , withRouter} from "react-router-dom";
 import './header_menu.scss';
 
 class HeaderMenu extends Component{
@@ -20,19 +20,25 @@ class HeaderMenu extends Component{
 
         if (search.match(/^\d+$/)){
             let link = '/blockDetail/'+search;
-            window.location = link;
+            this.props.history.push(link);
             
         }
         else if (search.length==64){
             let link = '/txDetail/'+search;
-            window.location = link;
+            this.props.history.push(link);
             
         }
         else if (search.length==44){
             let link = '/txUserList/'+search;
-            window.location = link;
+            this.props.history.push(link);
         }
         
+    }
+
+    handleKeyDown(e){
+        if (e.key=='Enter'){
+            this.handleSearch();
+        }
     }
 
     render(){
@@ -84,7 +90,7 @@ class HeaderMenu extends Component{
                     <div className="serBox">
                         <div className="search">
                             <label >
-                                <input type="text" className="searchTerm" placeholder="" ref={ el => this.searchTerm = el}/>
+                                <input type="text" className="searchTerm" placeholder="" ref={ el => this.searchTerm = el}  onKeyDown={(e)=>this.handleKeyDown(e)}/>
                             </label>
                             <a className="searchButton" onClick={this.handleSearch} >
                                 <i className="eden-search"></i>
@@ -114,4 +120,4 @@ class HeaderMenu extends Component{
 };
 
 
-export default HeaderMenu;
+export default withRouter(HeaderMenu);

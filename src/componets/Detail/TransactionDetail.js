@@ -26,11 +26,27 @@ class TransactionDetail extends Component {
             }
         );
     }
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+    
     
 
     componentWillUnmount(){
 
     }
+
+    componentDidUpdate(prevProps) {                
+        if (this.props.match.params.tx_id !== prevProps.match.params.tx_id) {
+            this._requests = this.apis.getTransactionInformation(this.props.match.params.tx_id).then((data)=>
+            {                
+                this.setState({data:data});
+                this._requests = null;   
+            }
+        );
+        }
+      }
 
     render(){
 
