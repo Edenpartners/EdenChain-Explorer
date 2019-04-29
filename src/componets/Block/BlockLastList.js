@@ -101,15 +101,15 @@ class BlockLastList extends Component{
 
                     <tbody>
                         <tr className="col">
-                            <th width="10%">
+                            <th width="16%">
                                 <span>Height</span>
                             </th>
 
-                            <th width="45%">
+                            <th width="42%">
                                 <span>Transaction NO</span>
                             </th>
 
-                            <th width="45%">
+                            <th width="42%">
                                 <span>Block Hash</span>
                             </th>
                         </tr>
