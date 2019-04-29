@@ -6,7 +6,7 @@ class SubHeaderMenu extends Component{
 
     constructor(){
         super();
-        this.state = {showHeader:false};
+        this.state = {showHeader:false};        
     }
 
     handleClick(e){
@@ -14,9 +14,36 @@ class SubHeaderMenu extends Component{
         e.preventDefault();
     }
 
+    handleSearch = async () => {
+        let search = this.searchTerm.value.trim();
+        
+        
+
+        if (search.search(/\\d+/)>=0){
+            console.log("block");
+            let link = '/blockDetail/'+search;
+            window.location = link;
+            
+        }
+        else if (search.length==64){
+            console.log("tx");
+            let link = '/txDetail/'+search;
+            window.location = link;
+            
+        }
+        else if (search.length==44){
+            console.log("txlist");
+            let link = '/txUserList/'+search;
+            window.location = link;
+        }
+        // Do nothing.
+    }
+
+
+
     render(){
         let header =  (
-         <div className="HeaderMenu">
+         <div className="SubHeaderMenu">
             <nav>
                 <div className="nav-toggle-btn" onClick={(e) => this.handleClick(e)}>
                     <i className="eden-align-justify"></i>
@@ -57,15 +84,15 @@ class SubHeaderMenu extends Component{
                 <div className="header fixed content">
 
                     <div className="logoDiv">
-                        <h1><a href=""><img src="../images/e-explorer2@4x.png" alt="logo"/></a></h1>
+                        <h1><Link to=""><img src="../images/e-explorer2@4x.png" alt="logo"/></Link></h1>
                     </div>
 
                     <div className="serBox">
                         <div className="search">
                             <label for="">
-                                <input type="text" className="searchTerm" placeholder=""/>
+                                <input type="text" className="searchTerm" placeholder="" ref={ el => this.searchTerm = el}/>
                             </label>
-                            <a className="searchButton">
+                            <a className="searchButton" onClick={this.handleSearch}>
                                 <i className="eden-search"></i>
                             </a>
                         </div>

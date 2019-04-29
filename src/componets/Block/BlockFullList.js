@@ -2,58 +2,162 @@ import React, { Component } from 'react';
 import Footer from '../Footer/footer';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import './sub.scss';
+import apis from '../../api/api';
+import { Link } from "react-router-dom";
 
-import $ from "jquery";
 
 
 class BlockFullList extends Component {
-    render() {
-        //pagination 스크립트 s
-        $('ul.pagination').on('click', 'a', function() { // listen for click on pagination link
-            if($(this).hasClass('active')) return false;
-          
-            let active_elm = $('ul.pagination a.active');
-          
-            if(this.id == 'next'){
-              var _next = active_elm.parent().next().children('a');
-              if($(_next).attr('id') == 'next') {
-          
-                // appending next button if reach end
-                let num = parseInt($('a.active').text())+1;
-                active_elm.removeClass('active');
-                $('<li><a class="active" href="#">'+num+'</a></li>').insertBefore($('#next').parent());
-          
-                $('#prev').parent().next().remove();
-                return; 
-              }
-              _next.addClass('active');   
-          
-          
-          
-          
+    constructor(){
+        super();
+        this.state = {data:undefined, page:1, countperpage:15,endpage:1,maxpage:5,skippage:0};
+        this.apis = new apis();        
+    }
+
+
+    componentWillMount() {
+        this.queryPage();
+    }
+
+    componentWillUnmount(){
+     
+    }
+
+    queryPage(){
+        this._requests = this.apis.getBlockList(this.state.page,this.state.countperpage).then((data)=>
+        {   
+            //console.log(data);            
+            this.setState({data:data,endpage:this.getEndPage(data.total_count,this.state.countperpage )});
+            this._requests = null;                   
+        }
+        );
+    }
+
+    getEndPage(total, countPerPage) {
+        return Math.ceil(total/countPerPage);
+    }
+
+    handlePrev(){
+        if(this.state.skippage>0) {
+            if(this.state.page > this.state.skippage+this.state.maxpage ||
+                this.state.page > this.state.endpage ||
+                this.state.page-1<=this.state.skippage )
+            this.setState({skippage: this.state.skippage-1})
+        }
+
+        if(this.state.skippage <= this.state.page-1 && this.state.page >1  ) {
+            this.state.page--;
+            this.queryPage(); 
+        }
+    }
+
+    handleNext() {        
+        if(this.state.skippage < this.state.endpage &&
+            this.state.skippage < this.state.page + this.state.maxpage &&
+            this.state.skippage+this.state.maxpage < this.state.endpage) {            
+            this.setState({skippage: this.state.skippage+1 })
+        }
+
+        if( this.state.page-1 <= this.state.skippage ||
+            this.state.page < this.state.endpage){
+            
+            this.state.page ++;
+            this.queryPage();
+        }        
+    }
+
+    handlePageMove(page) {
+        this.state.page = page;
+        this.queryPage();
+    }
+
+    getPageList()   {
+        //pagination
+        let page_list=[];
+
+        page_list.push(<li key="-1"><a id="prev" onClick={() => this.handlePrev()}><i className="eden-chevrons-left"></i></a></li>);
+
+        let start = this.state.skippage;
+        let end = Math.min( this.state.endpage+this.state.skippage, this.state.maxpage+this.state.skippage);
+
+        for(let i = start; i< end ;i++)
+        {
+            if(this.state.page==(i+1))
+                page_list.push(
+                    (
+                        <li key={i}><a href="#" className="active" >{i+1}</a></li>
+                    )
+                );
+
+            else
+                page_list.push(
+                    (
+                        <li key={i}><a href="#" onClick={() => this.handlePageMove(i+1)} value={i}>{i+1}</a></li>
+                    )
+                );
+        }
+        page_list.push(<li key="-2"><a id="next" onClick={() => this.handleNext()}><i className="eden-chevrons-right"></i></a></li>);
+
+        return page_list;
+    }
+
+    render() {        
+        let page_list=[];
+
+        if(this.state.data)
+        {            
+           page_list = this.getPageList();
+        }
+
+
+        let data_list = [];
+
+        if(this.state.data)
+        {
+            for(let [index,d] of this.state.data.blocks.entries())
+            {
+                let date = new Date(d.timestamp*1000)
+                let link = "/blockDetail/"+d.height;
+
+                data_list.push( (                        
+                    <div className="tbTit" key={index}>
+                    <Link to={link}>
+                        <ul className="tbUl tbUl01">
+                            <li className="tit tit01"><i className=""></i>Block Number</li>
+                            <li className="con01">{d.height}</li>
+                        </ul>
+
+
+                        <ul className="tbUl tbUl02">
+                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
+                            {                                    
+                                        (()=>{
+                                            if (d.transactions.length>1)
+                                            {
+                                                return(<li className="con01">{d.transactions[0]}...</li>);
+                                            }
+                                            else
+                                            {
+                                                return(<li className="con01">{d.transactions[0]}</li>);
+                                            }
+                                            
+                                        }
+                                        )()
+                                       
+                            }
+                        </ul>
+
+                        <ul className="tbUl tbUl03">
+                            <li className="tit tit01"><i className=""></i>Block Hash</li>
+                            <li className="con01">{d.hash}<i className="eden-file"></i></li>
+                        </ul>
+                        </Link>
+                    </div>
+                ));
             }
-            else if(this.id == 'prev') {
-              let _prev = active_elm.parent().prev().children('a');
-          
-          
-          
-              if($(_prev).attr('id') == 'prev') {
-                let num = parseInt($('a.active').text()) - 1;
-                active_elm.removeClass('active');
-                _prev = $('<li><a class="active" href="#">'+num+'</a></li>').insertAfter($('#prev').parent());
-          
-                $('#next').parent().prev().remove();
-          
-              };
-              _prev.addClass('active');   
-          
-            } else {
-              $(this).addClass('active');
-            }
-            active_elm.removeClass('active');
-          
-          });
-           //pagination 스크립트 e
+        }
+
+
 
 
         return (
@@ -68,276 +172,9 @@ class BlockFullList extends Component {
 
                             <h3><i className="eden-box"></i>Block List <span>Data Information for Developer</span></h3>
                             <div className="tables02">
-                                <div className="tbTit">
-                                    <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
 
 
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div className="tbTit">
-                                <a href="/blockDetail">
-                                        <ul className="tbUl tbUl01">
-                                            <li className="tit tit01"><i className=""></i>Block Number</li>
-                                            <li className="con01">sfwefs</li>
-                                        </ul>
-
-
-                                        <ul className="tbUl tbUl02">
-                                            <li className="tit tit01"><i className=""></i>Transaction NO</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef</li>
-                                        </ul>
-
-                                        <ul className="tbUl tbUl03">
-                                            <li className="tit tit01"><i className=""></i>Block Hash</li>
-                                            <li className="con01">sfwefwefwefwefwefwfwefwfwefwef<i className="eden-file"></i></li>
-                                        </ul>
-                                    </a>
-                                </div>
+                               {data_list}
 
                             </div>
                             
@@ -347,18 +184,7 @@ class BlockFullList extends Component {
 
                     <div className="center">
                         <ul className="pagination">
-                            <li><a id="prev"><i className="eden-chevrons-left"></i></a></li>
-                            <li><a id="test1" className="active"  href="#">1</a></li>
-                            <li><a id="test2" href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#" className="none">6</a></li>
-                            <li><a href="#" className="none">7</a></li>
-                            <li><a href="#" className="none">8</a></li>
-                            <li><a href="#" className="none">9</a></li>
-                            <li><a href="#" className="none">10</a></li>
-                            <li><a id="next"><i className="eden-chevrons-right"></i></a></li>
+                            {page_list}                           
                         </ul>
                     </div>
 

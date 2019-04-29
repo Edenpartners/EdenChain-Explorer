@@ -1,10 +1,62 @@
 import React, {Component} from 'react';
-import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import Footer from '../Footer/footer';
-import styles from './sub_transaction.scss';
+import { Link } from "react-router-dom";
+import apis from '../../api/api';
+import './sub_transaction.scss';
+import HeaderMenu from '../HeaderMenu/HeaderMenu';
+
+
 
 class TransactionDetail extends Component {
+    constructor()
+    {
+        super();
+        this.apis = new apis();   
+        this.state = {data : undefined};
+          
+    }
+
+    componentWillMount() {
+        // Get Last page, 6 items.
+        const { match: { params } } = this.props;
+
+        this._requests = this.apis.getBlockInformation(params.block_height).then((data)=>
+            {                
+                this.setState({data:data});
+                this._requests = null;   
+            }
+        );
+    }
+    
+
+    componentWillUnmount(){
+
+    }
+
     render(){
+        let data = this.state.data;
+        let date = new Date();
+        let data_list = []
+        if(!data)
+        {
+            data = {}
+            data.transactions = [''];
+            data.height="";
+            data.hash="";
+            data.timestamp = undefined;
+        }
+        else
+        {
+            date = new Date(data.timestamp*1000)
+
+            for(let [index,d] of this.state.data.transactions.entries())
+            {
+                let link = "/txDetail/"+d;
+                data_list.push(<Link to={link} key={index}><span>{d}</span><br/></Link>)
+            }
+        }
+        
+
         return (
             <div className="TransactionDetail wrapper subContainer">
                 <HeaderMenu></HeaderMenu>
@@ -14,35 +66,39 @@ class TransactionDetail extends Component {
                 <div className="fixed">
                 
 
-                    <h3><i className="eden-database"></i>Transaction Detail <span>숫자</span></h3>
-                    <div class="detailBox">
-                        <h4>hihihihihihihih ( Block Number ) <span>33</span></h4>
+                    <h3><i className="eden-database"></i>Block Detail <span>{data.height}</span></h3>
+                    <div className="detailBox">
+                        <h4>Block Number <span>{data.height}</span></h4>
 
-                        <table cellpadding="0" cellspacing="0" border="0">
+                        <table cellPadding="0" cellSpacing="0" border="0">
                             <tbody>
-                                <tr class="">
+                                <tr className="">
                                     <th>Block Height</th>
-                                    <td>sdfsfsd</td>
+                                    <td>{data.height}</td>
                                 </tr>
                                 <tr></tr>
 
                                 <tr>
                                     <th>Time Stamp</th>
-                                    <td>2019/04/21 08:00:00(UTC)</td>
+                                    <td>{
+                                        data.timestamp && 
+                                        date.getUTCFullYear()+"-"+(date.getUTCMonth()+1)+"-"+date.getUTCDate()+" "+
+                                        date.getUTCHours()+":"+date.getMinutes()+":"+date.getSeconds()+"(UTC)"
+                                    }</td>
                                 </tr>
                                 <tr></tr>
 
                                 <tr>
                                     <th>Hash</th>
-                                    <td>asdfasdfsdfasdf</td>
+                                    <td>{data.hash}</td>
                                 </tr>
                                 <tr></tr>
 
                                 <tr>
                                     <th>Transaction</th>
                                     <td>
-                                        <a href="./txlist"><span>hhhhhhhhhhhhhh</span></a>
-                                        <button>read more</button>
+                                        {data_list}
+                                        
                                     </td>
                                 </tr>
                             </tbody>

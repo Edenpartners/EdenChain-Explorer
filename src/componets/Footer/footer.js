@@ -6,13 +6,13 @@ class Footer extends Component{
 
     render() {
         return (
-            <div class="Footer">
+            <div className="Footer">
             <div className="footerCon">
             
                 <div className="col col01">
                     <div id="text-1" className="widget">
                         <p>
-                            <img src="images/eden.svg"
+                            <img src="/images/eden.svg"
                                 alt="edenchain" />
                         </p>
                         <p className="widget_txt">

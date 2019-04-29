@@ -1,12 +1,24 @@
 import React, {Component} from 'react';
 import {Line} from 'react-chartjs-2';
-
+import apis from '../../api/api';
 
 class BlockDayChart extends Component{
     constructor(){
         super();
+        this.apis = new apis();
+
+        // Create X-Axis
+        this.labels=[]
+        let today = new Date();
+        today.setDate(today.getDate()-7);
+        for(let i=0;i<7;i++)
+        {
+            today.setDate(today.getDate()+1);
+            this.labels.push(new String(today.getUTCDate()));
+        }
+        
         this.chartData = {
-                    labels:["01","02","03","04","05","06","07"],
+                    labels:this.labels,
                     options: {
                         responsive: true,
                         tooltips: {
@@ -15,7 +27,7 @@ class BlockDayChart extends Component{
                     },
                     datasets: [
                     {
-                        label: 'Blocks',
+                        label: '7 days Blocks',
                         fill:false,
                         lineTention:0.1,
                         backgroundColor: 'rgba(249, 141, 101, 1)',
@@ -33,7 +45,7 @@ class BlockDayChart extends Component{
                         pointHoverBorderWidth:2,
                         pointRadius:1,
                         pointHitRadius:10,
-                        data:[30,49,20,51,76,55,48]
+                        data:[0,0,0,0,0,0,0]
 
                     }
                 ]
@@ -44,13 +56,13 @@ class BlockDayChart extends Component{
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero: true,
                     }
                 }]
             },
             title: {
                 display: true,
-                text: 'Blocks',
+                text: '7 days Blocks',
                 fontSize:14,
                 fontFamily:"'Hind',sans-serif",
                 fontColor: 'rgba(25, 78, 79, 1)',
@@ -68,10 +80,39 @@ class BlockDayChart extends Component{
                 }
             }
         };
+
+        this.state = {chartData: this.chartData, chartOptions: this.cartOptions};
     }
 
+    componentWillMount() {
+        this._requests = this.apis.getTimeSeriesBlocks('day').then((data)=>
+        {
+            this._requests = null;
+
+            let cdata = this.state.chartData;
+           
+            
+            for (let i=0;i<this.labels.length;i++){
+                for (let j = 0;j<data.length;j++){                        
+                        if(data[j].hasOwnProperty(this.labels[i]))
+                        {                           
+                            cdata.datasets[0].data[i] = data[j][this.labels[i]]
+                        }
+                }                
+            }
+                  
+            this.setState({chartData:cdata});
+        }
+        );
+    }
+
+    componentWillUnmount(){
+
+    }
+
+
     render(){
-        return <div className="cont cont03 chart"><Line id="third_chart" data={this.chartData} options={this.chartOptions} /></div>
+        return <div className="cont cont03 chart"><Line id="third_chart" data={this.state.chartData} options={this.state.chartOptions} /></div>
     }
 }
 

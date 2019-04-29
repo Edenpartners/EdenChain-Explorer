@@ -77,6 +77,148 @@ class EExplorerApis{
             return undefined;
     }
 
+    async getLatestTransactionPerSecond(){
+
+        let jr = this.getDefaultJson(GET_LATEST_TPS);
+
+        let resp = await axInstance.post(JSON_RPC_API_URL,jr);
+
+        if(this.isValidResponse(jr,resp))
+        {
+            return resp.data.result.data.tps;
+        }
+        else
+            return undefined;
+    }
+
+    async getLatestBlockCommitTime(){
+        
+        let jr = this.getDefaultJson(GET_BLOCK_LAST_COMMIT_TIME);
+
+        let resp = await axInstance.post(JSON_RPC_API_URL,jr);
+
+        if(this.isValidResponse(jr,resp))
+        {
+            return new Date(resp.data.result.data.time*1000);
+        }
+        else
+            return undefined;
+    }
+
+    async getTimeSeriesBlocks(type){
+        
+        let jr = this.getDefaultJson(GET_TIME_SERIES_BLOCKS);
+        jr.params.time_series_type = type
+
+        let resp = await axInstance.post(JSON_RPC_API_URL,jr);
+
+        if(this.isValidResponse(jr,resp))
+        {
+            if (type=="hour")
+                return resp.data.result.data.hour_series;
+            else
+                return resp.data.result.data.day_series;
+        }
+        else
+            return undefined;
+    }
+
+    async getTimeSeriesTransactions(type){
+        
+        let jr = this.getDefaultJson(GET_TIME_SERIES_TRANSACTIONS);
+        jr.params.time_series_type = type
+
+        let resp = await axInstance.post(JSON_RPC_API_URL,jr);
+
+        if(this.isValidResponse(jr,resp))
+        {
+            if (type=="hour")
+                return resp.data.result.data.hour_series;
+            else
+                return resp.data.result.data.day_series;
+        }
+        else
+            return undefined;
+    }
+
+    async getTransactionList(page, count_per_page){
+        
+        let jr = this.getDefaultJson(GET_TRANSACTION_LIST);
+        jr.params.page = page
+        jr.params.count_per_page = count_per_page
+
+        let resp = await axInstance.post(JSON_RPC_API_URL,jr);
+
+        if(this.isValidResponse(jr,resp))
+        {           
+            return resp.data.result.data;
+        }
+        else
+            return undefined;
+    }
+
+    async getBlockList(page, count_per_page){
+        
+        let jr = this.getDefaultJson(GET_BLOCK_LIST);
+        jr.params.page = page
+        jr.params.count_per_page = count_per_page
+
+        let resp = await axInstance.post(JSON_RPC_API_URL,jr);
+
+        if(this.isValidResponse(jr,resp))
+        {           
+            return resp.data.result.data;
+        }
+        else
+            return undefined;
+    }
+
+    async getBlockInformation(height){
+        
+        let jr = this.getDefaultJson(GET_BLOCK_INFORMATION);
+        jr.params.height = height
+        
+        let resp = await axInstance.post(JSON_RPC_API_URL,jr);
+
+        if(this.isValidResponse(jr,resp))
+        {           
+            return resp.data.result.data;
+        }
+        else
+            return undefined;
+    }
+
+    async getTransactionInformation(tx_id){
+
+        let jr = this.getDefaultJson(GET_TRANSACTION_INFORMATION);
+        jr.params.tx_id = tx_id
+        
+        let resp = await axInstance.post(JSON_RPC_API_URL,jr);
+
+        if(this.isValidResponse(jr,resp))
+        {           
+            return resp.data.result.data;
+        }
+        else
+            return undefined;
+    }
+
+    async searchKeyword(keyword,page, count_per_page){
+        let jr = this.getDefaultJson(SEARCH_KEYWORD);
+        jr.params.keyword  = keyword 
+        jr.params.page = page
+        jr.params.count_per_page = count_per_page
+        
+        let resp = await axInstance.post(JSON_RPC_API_URL,jr);
+
+        if(this.isValidResponse(jr,resp))
+        {           
+            return resp.data.result.data;
+        }
+        else
+            return undefined;  
+    }
+
 };
 
 

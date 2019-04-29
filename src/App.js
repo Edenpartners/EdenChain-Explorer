@@ -7,6 +7,7 @@ import TransactionFullList from './componets/Transaction/TransactionFullList';
 import TransactionDetail from './componets/Detail/TransactionDetail';
 import BlockFullList from './componets/Block/BlockFullList';
 import BlockDetail from './componets/Detail/BlockDetail';
+import TransactionUserList from './componets/Transaction/TransactionUserList';
 
 class App extends Component {
   render() {
@@ -15,8 +16,10 @@ class App extends Component {
          <Route exact path="/" component={MainFront} />
          <Route path="/txlist" component={TransactionFullList} />
          <Route path="/blocklist" component={BlockFullList} />
-         <Route path="/blockDetail" component={BlockDetail} />
-         <Route path="/txDtail" component={TransactionDetail} />
+         <Route path="/blockDetail/:block_height" component={BlockDetail} />
+         <Route path="/txDetail/:tx_id" component={TransactionDetail} />
+         <Route path="/txDetail/:tx_id" component={TransactionDetail} />
+         <Route path="/txUserList/:keyword" component={TransactionUserList} />
       </Router>    
     );
   }

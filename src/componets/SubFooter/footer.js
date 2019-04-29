@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import '../SubFooter/footer.scss';
+import './footer.scss';
 
 class Footer extends Component{
 
     render() {
         return (
-            <footer>
+            <div className="SubFooter">
             <div className="footerCon">
             
                 <div className="col col01">
                     <div id="text-1" className="widget">
                         <p>
-                            <img src="images/eden_white.svg"
+                            <img src="/images/eden_white.svg"
                                 alt="edenchain" />
                         </p>
                         <p className="widget_txt">
@@ -91,7 +91,7 @@ class Footer extends Component{
 
 
             </div>
-            </footer>
+            </div>
 
         );
     }
