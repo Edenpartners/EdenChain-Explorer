@@ -174,7 +174,7 @@
   }
 
   .tbl-content table tr:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.2s;
     color: #333;
@@ -186,11 +186,11 @@
 
   .tbl-content table tr {
     width: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background:#f7f7f7;
   }
 
   .tbl-content table tr a {
-    color: #fff;
+    color: #333;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 
   }
