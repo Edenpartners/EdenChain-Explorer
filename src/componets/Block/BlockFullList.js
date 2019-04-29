@@ -23,6 +23,10 @@ class BlockFullList extends Component {
      
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     queryPage(){
         this._requests = this.apis.getBlockList(this.state.page,this.state.countperpage).then((data)=>
         {   
