@@ -24,6 +24,11 @@ class TransactionFullList extends Component {
     componentWillUnmount(){
 
     }
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+    
  
     queryPage(){
       this._requests = this.apis.getTransactionList(this.state.page,this.state.countperpage).then((data)=>

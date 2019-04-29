@@ -7,7 +7,7 @@ import HeaderMenu from '../HeaderMenu/HeaderMenu';
 
 
 
-class TransactionDetail extends Component {
+class BlockDetail extends Component {
     constructor()
     {
         super();
@@ -27,11 +27,26 @@ class TransactionDetail extends Component {
             }
         );
     }
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
     
 
     componentWillUnmount(){
 
     }
+
+    componentDidUpdate(prevProps) {                
+        if (this.props.match.params.block_height !== prevProps.match.params.block_height) {
+            this._requests = this.apis.getBlockInformation(this.props.match.params.block_height).then((data)=>
+            {                
+                this.setState({data:data});
+                this._requests = null;   
+            }
+        );
+        }
+      }
 
     render(){
         let data = this.state.data;
@@ -115,4 +130,4 @@ class TransactionDetail extends Component {
     }
 };
 
-export default TransactionDetail;
+export default BlockDetail;
