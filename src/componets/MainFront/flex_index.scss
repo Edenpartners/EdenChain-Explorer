@@ -641,6 +641,60 @@
     }
 
 
+    .header {
+        width: 100%;
+        display: block;
+        height: 110px;
+    }
+
+    .header .search input {
+        height: 25px;
+        width: 200px;
+        padding: 4px 10px;
+    }
+    .header .search a{
+        width: fit-content;
+        justify-content: right;
+        float: right;
+        padding-top: 7px;
+    }
+    .header .search {
+        grid-template-columns: none;
+        width: 270px;
+        display: block;
+    }
+    .header .search label{
+        float: left;
+        height: 25px;
+    }
+
+    .header .search button {
+        height: 35px;
+        width: 30px;
+    }
+    .header .search input{
+        height: 30px;
+    }
+
+    .header.content {
+        height: 130px;
+    }
+    .logoDiv {
+        margin: 0 auto;
+    }
+
+    .logoDiv h1 {
+        width: 120px;
+        margin: 10px auto;
+    }
+
+    .logoDiv h1 a img {
+        width: 120px;
+    }
+
+
+
+    
 
     .container .fullCon{
         display: block;
