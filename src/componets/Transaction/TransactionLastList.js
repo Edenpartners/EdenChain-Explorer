@@ -54,8 +54,7 @@ class TransactionLastList extends Component{
                             </td>
 
                             <td><Link to={link}>
-                                <span>{date.getUTCFullYear()+"-"+(date.getUTCMonth()+1)+"-"+date.getUTCDate()+" "+
-                                        date.getUTCHours()+":"+date.getMinutes()+":"+date.getSeconds()+"(UTC)"}</span></Link>
+                                <span>{this.ellipseString(d.associated_asset)}</span></Link>
                             </td>                     
                         </tr>
                 ));
@@ -83,7 +82,7 @@ class TransactionLastList extends Component{
                             </th>
 
                             <th width="40%">
-                                <span>Time(UTC)</span>
+                                <span>Namespace</span>
                             </th>
                         </tr>
 

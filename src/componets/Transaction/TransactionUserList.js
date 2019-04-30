@@ -141,8 +141,7 @@ class TransactionUserList extends Component {
 
                       <td width="10%"><Link to={link}>{index}</Link></td>
                       <td width="10%"><Link to={link}>{d.id}</Link></td>
-                      <td width="20%"><Link to={link}>{date.getUTCFullYear()+"-"+(date.getUTCMonth()+1)+"-"+date.getUTCDate()+" "+
-                                  date.getUTCHours()+":"+date.getMinutes()+":"+date.getSeconds()+"(UTC)"}</Link></td>
+                      <td width="20%"><Link to={link}>{d.operation}</Link></td>
                       <td width="20%" className="none"><Link to={link}>{d.before_owner[0]}</Link></td>
                       <td width="20%"><Link to={link}>{d.request_transaction_amount[0] && d.request_transaction_amount[0].address}</Link></td>
                       <td width="20%"><Link to={link}>{d.request_transaction_amount[0] && d.request_transaction_amount[0].amount}</Link></td>
@@ -175,7 +174,7 @@ class TransactionUserList extends Component {
                       <tr>
                         <th width="10%">NO</th>
                         <th width="10%">TX Hash</th>
-                        <th width="20%">Create Time(UTC)</th>
+                        <th width="20%">OPERATION</th>
                         <th width="20%" className="none">From</th>                          
                         <th width="20%">To</th>
                         <th width="20%">Amount</th>
