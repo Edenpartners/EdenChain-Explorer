@@ -27,8 +27,8 @@ class BlockLastList extends Component{
     ellipseString(data){
         if(data)
         {
-            if(data.length>24)
-                return data.substring(0,24)+"...";
+            if(data.length>22)
+                return data.substring(0,22)+"...";
             else
                 return data;
         }
