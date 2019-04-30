@@ -28,8 +28,8 @@ class TransactionLastList extends Component{
     ellipseString(data){
         if(data)
         {
-            if(data.length>30)
-                return data.substring(0,30)+"...";
+            if(data.length>26)
+                return data.substring(0,26)+"...";
             else
                 return data;
         }
@@ -81,7 +81,7 @@ class TransactionLastList extends Component{
                                 <span>Transaction ID</span>
                             </th>
 
-                            <th width="40%">
+                            <th width="50%">
                                 <span>Namespace</span>
                             </th>
                         </tr>
