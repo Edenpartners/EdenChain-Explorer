@@ -12,7 +12,7 @@ export const axInstance = axios.create({
 });
 
 // default api path
-axInstance.defaults.baseURL  = "https://eexplorer-api.edenchain.io/api"
+axInstance.defaults.baseURL  = "https://eexplorer-api-cr.edenchain.io/api";
 
 // for convinient, response is modified.
 axInstance.interceptors.response.use((response => {

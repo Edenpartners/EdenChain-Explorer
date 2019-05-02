@@ -28,8 +28,8 @@ class TransactionLastList extends Component{
     ellipseString(data){
         if(data)
         {
-            if(data.length>30)
-                return data.substring(0,30)+"...";
+            if(data.length>26)
+                return data.substring(0,26)+"...";
             else
                 return data;
         }
@@ -54,8 +54,7 @@ class TransactionLastList extends Component{
                             </td>
 
                             <td><Link to={link}>
-                                <span>{date.getUTCFullYear()+"-"+(date.getUTCMonth()+1)+"-"+date.getUTCDate()+" "+
-                                        date.getUTCHours()+":"+date.getMinutes()+":"+date.getSeconds()+"(UTC)"}</span></Link>
+                                <span>{this.ellipseString(d.associated_asset)}</span></Link>
                             </td>                     
                         </tr>
                 ));
@@ -82,8 +81,8 @@ class TransactionLastList extends Component{
                                 <span>Transaction ID</span>
                             </th>
 
-                            <th width="40%">
-                                <span>Time(UTC)</span>
+                            <th width="50%">
+                                <span>Namespace</span>
                             </th>
                         </tr>
 

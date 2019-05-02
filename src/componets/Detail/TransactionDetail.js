@@ -109,7 +109,7 @@ class TransactionDetail extends Component {
                                 <tr></tr>
 
                                 <tr>
-                                    <th>Asset ID</th>
+                                    <th>Namespace</th>
                                     <td>{data.associated_asset}</td>
                                 </tr>
                                 <tr></tr>
