@@ -71,13 +71,14 @@ body {
 /**/
 nav {
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     top: 0;
     bottom: 0;
     background-color: #f98d78;
     transform: translate3d(-200px, 0, 0);
     transition: transform 0.4s ease;
     width: 240px;
+
 }
 
 .nav-toggle-btn {
@@ -163,15 +164,17 @@ nav .menu li a {
 @media screen and (min-width:501px) and (max-width: 959px) {
     nav{
         width: 240px;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     .nav-toggle-btn .eden-align-justify{
-        font-size: 1em;
+        font-size: 1.6em;
     }
     .menu_tit li{
         font-size: 1em;
     }
     .nav-toggle-btn .eden-align-justify{
-        right: 12px;
+        right: 8px;
     }
     .menu_tit li:last-child{
         padding-right: 12px;
@@ -194,6 +197,12 @@ nav .menu li a {
     }
     nav .navCon{
         width: 240px;
+    }
+    nav .menu li a i {
+        font-size: 18px;
+    }
+    .menu_tit{
+        grid-template-columns: 75% 25%;
     }
 }
 @media screen and (max-width: 500px) {
@@ -245,7 +254,7 @@ nav .menu li a {
     .serBox {}
 
     .nav-toggle-btn .eden-align-justify {
-        font-size: 1em;
+        font-size: 1.6em;
         right: 10px;
         top: 65px;
         color: #092347;
@@ -260,9 +269,11 @@ nav .menu li a {
     }
 
     nav .menu li a i {
-        font-size: 14px;
+        font-size: 18px;
     }
-
+    .menu_tit{
+        grid-template-columns: 75% 25%;
+    }
     .menu_tit li {
         font-size: 14px;
     }
