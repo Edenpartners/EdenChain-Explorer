@@ -78,8 +78,8 @@ class HeaderMenu extends Component{
                             </ul>
                         </Link></li>
                     </ul>
-                    </div>
-                </nav>
+                </div>
+            </nav>
 
                 <div className="header fixed content">
 
